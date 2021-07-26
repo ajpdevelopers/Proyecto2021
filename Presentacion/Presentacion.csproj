@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6560F9B8-ADCB-4159-95DD-F52813BE1681}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar">
+      <HintPath>..\..\WindowsFormsApp3\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation">
+      <HintPath>..\..\WindowsFormsApp3\packages\CircularProgressBar.2.8.0.16\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormBienvenidaDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBienvenidaDocente.Designer.cs">
+      <DependentUpon>FormBienvenidaDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultasD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultasD.Designer.cs">
+      <DependentUpon>FormConsultasD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPerfilD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPerfilD.Designer.cs">
+      <DependentUpon>FormPerfilD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipalD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipalD.Designer.cs">
+      <DependentUpon>FormPrincipalD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBienvenida.Designer.cs">
+      <DependentUpon>FormBienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChatA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChatA.Designer.cs">
+      <DependentUpon>FormChatA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultasA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultasA.Designer.cs">
+      <DependentUpon>FormConsultasA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGruposA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGruposA.Designer.cs">
+      <DependentUpon>FormGruposA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInicio.Designer.cs">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPerfilA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPerfilA.Designer.cs">
+      <DependentUpon>FormPerfilA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistrarseDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistrarseDocente.Designer.cs">
+      <DependentUpon>FormRegistrarseDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAlumno.designer.cs">
+      <DependentUpon>LoginAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.es-ES.Designer.cs">
+      <DependentUpon>Resource1.es-ES.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resource1.en-US.Designer.cs">
+      <DependentUpon>Resource1.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginDocente.Designer.cs">
+      <DependentUpon>LoginDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs" />
+    <Compile Include="FormRegistrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistrarse.Designer.cs">
+      <DependentUpon>FormRegistrarse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuariosDocente.cs" />
+    <EmbeddedResource Include="FormBienvenidaDocente.resx">
+      <DependentUpon>FormBienvenidaDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultasD.resx">
+      <DependentUpon>FormConsultasD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPerfilD.resx">
+      <DependentUpon>FormPerfilD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipalD.resx">
+      <DependentUpon>FormPrincipalD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBienvenida.resx">
+      <DependentUpon>FormBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChatA.resx">
+      <DependentUpon>FormChatA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultasA.resx">
+      <DependentUpon>FormConsultasA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGruposA.resx">
+      <DependentUpon>FormGruposA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInicio.resx">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPerfilA.resx">
+      <DependentUpon>FormPerfilA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrarse.resx">
+      <DependentUpon>FormRegistrarse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrarseDocente.resx">
+      <DependentUpon>FormRegistrarseDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAlumno.resx">
+      <DependentUpon>LoginAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.es-ES.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.es-ES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginDocente.resx">
+      <DependentUpon>LoginDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{5eb21d7a-200a-4586-86f7-3113763d6888}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1810747.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60577.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lenguajes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grupo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixlr-bg-result %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grupo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-book %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PerfilG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female-avatar-woman-profile-icon-for-network-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blond-woman-avatar-profile-icon-of-smiling-girl-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blond-woman-avatar-profile-icon-of-smiling-girl-vector1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_large1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_white_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_white_large1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_white_large2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_large2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_small_icon_only_inverted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_white_large3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ver contraseña.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verpass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ENVIAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ENVIAR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\añadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\añadir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaaa.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
