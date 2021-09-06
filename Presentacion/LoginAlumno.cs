@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Presentacion;
+using Dominio;
+using Datos;
 //AJP DEVELOPERS
 namespace Presentacion
 
@@ -202,51 +204,44 @@ namespace Presentacion
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            
-            if((txtUsuario.Text == Usuarios.usuario && (txtContraseña.Text == Usuarios.contraseña)))
-            {
-                this.Hide();
-                FormBienvenida bienvenida = new FormBienvenida();
-                bienvenida.ShowDialog();
-                FormPrincipal login = new FormPrincipal();
-                login.Show();
-                login.FormClosed += cerrarsesion;
-                this.Hide();
 
-            }
-            else{ msgError("  Usuario o contraseña equivocada");
-            txtContraseña.Clear();
-                txtUsuario.Focus();
-                
-            }
-            if (txtUsuario.Text != "USUARIO")
-                {
-
-                    if (txtContraseña.Text != "CONTRASEÑA")
-                    {
-
-                        {
-
-                        }
-
-                        {
-
-                        }
-
-
-                    }
-                    else msgError("Por favor ingrese contraseña.");
-                }
-                else msgError("Por favor ingrese nombre de usuario.");
-
-            
-            
            
-              
-            
-
-       
+            if (txtUsuario.Text != "USUARIO" && txtUsuario.TextLength > 2)
+            {
+                if (txtContraseña.Text != "CONTRASEÑA")
+                {
+                    UserModel user = new UserModel();
+                    var validLogin = user.LoginUser(txtUsuario.Text, txtContraseña.Text);
+                    if (validLogin == true)
+                    {
+                        this.Hide();
+                        FormBienvenida bienvenida = new FormBienvenida();
+                        bienvenida.ShowDialog();
+                        FormPrincipal login = new FormPrincipal();
+                        login.Show();
+                        login.FormClosed += cerrarsesion;
+                        this.Hide();
+                    }
+                    else
+                    {
+                        msgError("Usuario o contaseña incorrectos");
+                        txtContraseña.Text = "CONTRASEÑA";
+                        txtContraseña.UseSystemPasswordChar = false;
+                        txtUsuario.Focus();
+                    }
+                }
+                else msgError("Por favor ingrese contraseña .");
+            }
+            else msgError("Por favor ingrese nombre de usuario .");
         }
+
+
+
+
+
+
+
+    
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
