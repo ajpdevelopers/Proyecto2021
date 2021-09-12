@@ -1,0 +1,4 @@
+0 0 * * 7 tar -czf /srv/backup/alejonievas03.tar.gz /home/alejonievas03
+0 0 * * 7 tar -czf /home/alejonievas03/documentos respaldo.sh
+
+
