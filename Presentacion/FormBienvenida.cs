@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 
+
 namespace Presentacion
 {
     public partial class FormBienvenida : Form
@@ -43,7 +44,7 @@ namespace Presentacion
 
         private void FormBienvenida_Load(object sender, EventArgs e)
         {
-            lblUser.Text = Usuarios.nombre + " " + Usuarios.apellido;
+            lblUser.Text = UserCache.nombre + " " + UserCache.apellido;
             //fotoBienvenida.Image = (Image)Usuarios.imagen;
             
             this.Opacity = 0.0;

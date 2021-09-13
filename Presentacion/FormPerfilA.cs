@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
 
 namespace Presentacion
 {
@@ -112,16 +113,16 @@ namespace Presentacion
 
         private void FormPerfilA_Load(object sender, EventArgs e)
         {
-            lblNombreA.Text = Usuarios.nombre;
-            lblUsuarioPerfilA.Text = Usuarios.usuario;
-            lblApellidoA.Text = Usuarios.apellido;
-            lblCedulaA.Text = Usuarios.cedula;
-            lblGrupoA.Text = Usuarios.grupo;
-            txtEditUsuario.Text = Usuarios.usuario; ;
+            lblNombreA.Text = UserCache.nombre;
+            lblUsuarioPerfilA.Text = UserCache.usuario;
+            lblApellidoA.Text = UserCache.apellido;
+            lblCedulaA.Text = Convert.ToString(UserCache.cedula);
+            lblGrupoA.Text = UserCache.grupo;
+            txtEditUsuario.Text = UserCache.usuario; ;
             txtEditPass.UseSystemPasswordChar = true;
-            txtEditPass.Text = Usuarios.contraseña;
+            txtEditPass.Text = UserCache.contraseña;
             txtEditpass2.UseSystemPasswordChar = true;
-            txtEditpass2.Text = Usuarios.contraseña;
+            txtEditpass2.Text = UserCache.contraseña;
             pictureDef.Image = (Image)Usuarios.imagen;
             pictureBox1.Image =(Image)Usuarios.imagen;
 

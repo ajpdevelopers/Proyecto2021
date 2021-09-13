@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Presentacion
 {
@@ -354,6 +355,10 @@ namespace Presentacion
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
+            MySqlConnection conectar = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
+            conectar.Open();
+            MySqlConnection conectar1 = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
+            conectar1.Open();
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
             string cedula = txtCedula.Text;
@@ -387,17 +392,23 @@ namespace Presentacion
             {
                 msgError("Las contraseñas no son iguales");
             }
-            else
+
+            try
             {
+                MySqlCommand comando = new MySqlCommand("insert into usuario(ci, nombre, apellido, username, contraseña) values ('" + txtCedula.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtNombreUser.Text + "','" + txtContraseña.Text + "');", conectar);
+                comando.ExecuteNonQuery();
+                conectar.Close();
+                MySqlCommand comando1 = new MySqlCommand("insert into docente(ci) values ('" + txtCedula.Text + "');", conectar1);
+                comando1.ExecuteNonQuery();
+                conectar1.Close();
+
                 MessageBox.Show("Registrado con exito", "REGISTRO EXITOSO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            UsuariosDocente.usuario = usuario;
-            UsuariosDocente.contraseña = contraseña;
-            UsuariosDocente.cedula = cedula;
-            UsuariosDocente.grupo = grupo;
-            UsuariosDocente.nombre = nombre;
-            UsuariosDocente.apellido = apellido;
-            UsuariosDocente.materia = materia;
+            catch
+            {
+                msgError("No se pudo registrar correctamente");
+            }
+
 
 
         }

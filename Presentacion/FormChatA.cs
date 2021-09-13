@@ -26,5 +26,20 @@ namespace Presentacion
         {
 
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

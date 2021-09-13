@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Datos
+namespace Dominio
 {
-    public static class UserCache
+   public static class UserCache
     {
         public static int cedula { get; set; }
         public static string usuario { get; set; }
@@ -14,10 +14,5 @@ namespace Datos
         public static string nombre { get; set; }
         public static string apellido { get; set; }
         public static string grupo { get; set; }
-        
-     
     }
-    
-
-   
 }

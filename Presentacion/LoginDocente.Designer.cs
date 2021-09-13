@@ -160,6 +160,7 @@ namespace Presentacion
             this.lblCuenta.Size = new System.Drawing.Size(234, 17);
             this.lblCuenta.TabIndex = 19;
             this.lblCuenta.Text = "¿No tienes una cuenta? Presiona aqui:";
+            this.lblCuenta.Click += new System.EventHandler(this.lblCuenta_Click);
             // 
             // Registrarse
             // 

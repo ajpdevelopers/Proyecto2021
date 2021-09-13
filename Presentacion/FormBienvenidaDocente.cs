@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using Dominio;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,7 +42,7 @@ namespace Presentacion
 
         private void FormBienvenidaDocente_Load(object sender, EventArgs e)
         {
-            lblUser.Text = UsuariosDocente.nombre + " " + UsuariosDocente.apellido;
+            lblUser.Text = UserCache.nombre + " " + UserCache.apellido;
             //fotoBienvenida.Image = (Image)UsuariosDocente.imagen;
 
             this.Opacity = 0.0;

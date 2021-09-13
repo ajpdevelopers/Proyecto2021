@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading;
+using Dominio;
 
 
 namespace Presentacion
@@ -31,43 +32,34 @@ namespace Presentacion
         }
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            if ((txtUsuario.Text == UsuariosDocente.usuario && (txtContraseña.Text == UsuariosDocente.contraseña)))
+            if (txtUsuario.Text != "USUARIO" && txtUsuario.TextLength > 2)
             {
-                this.Hide();
-                FormBienvenidaDocente bienvenida = new FormBienvenidaDocente();
-                bienvenida.ShowDialog();
-                FormPrincipalD login = new FormPrincipalD();
-                login.Show();
-                login.FormClosed += cerrarsesion;
-                this.Hide();
-
-            }
-            else
-            {
-                msgError("  Usuario o contraseña equivocada");
-                txtContraseña.Clear();
-                txtUsuario.Focus();
-
-            }
-            if (txtUsuario.Text != "USUARIO")
-            {
-
                 if (txtContraseña.Text != "CONTRASEÑA")
                 {
-
+                    UserModel user = new UserModel();
+                    var validLogin = user.LoginUser(txtUsuario.Text, txtContraseña.Text);
+                    if (validLogin == true)
                     {
-
+                        this.Hide();
+                        FormBienvenida bienvenida = new FormBienvenida();
+                        bienvenida.ShowDialog();
+                        FormPrincipalD login = new FormPrincipalD();
+                        login.Show();
+                        login.FormClosed += cerrarsesion;
+                        this.Hide();
                     }
-
+                    else
                     {
-
+                        msgError("Usuario o contaseña incorrectos");
+                        txtContraseña.Text = "CONTRASEÑA";
+                        txtContraseña.UseSystemPasswordChar = false;
+                        txtUsuario.Focus();
                     }
-
-
                 }
-                else msgError("Por favor ingrese contraseña.");
+                else msgError("Por favor ingrese contraseña .");
             }
-            else msgError("Por favor ingrese nombre de usuario.");
+            else msgError("Por favor ingrese nombre de usuario .");
+        
 
 
 
@@ -76,7 +68,7 @@ namespace Presentacion
 
 
 
-        }
+}
 
         private void Registrarse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -230,6 +222,11 @@ namespace Presentacion
 
 
 
+
+        }
+
+        private void lblCuenta_Click(object sender, EventArgs e)
+        {
 
         }
     }
