@@ -34,11 +34,11 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblGrupo = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtGrupos = new System.Windows.Forms.TextBox();
             this.btnEnviarConsA = new System.Windows.Forms.Button();
@@ -99,24 +99,24 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Location = new System.Drawing.Point(68, 148);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(741, 28);
             this.panel1.TabIndex = 50;
             // 
-            // label3
+            // lblNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label3.Location = new System.Drawing.Point(299, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 24);
-            this.label3.TabIndex = 48;
-            this.label3.Text = "Alejo Nievas";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.Menu;
+            this.lblNombre.Location = new System.Drawing.Point(299, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(135, 24);
+            this.lblNombre.TabIndex = 48;
+            this.lblNombre.Text = "Alejo Nievas";
             // 
             // label4
             // 
@@ -145,24 +145,24 @@ namespace Presentacion
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.lblGrupo);
             this.panel3.Location = new System.Drawing.Point(68, 218);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(741, 28);
             this.panel3.TabIndex = 51;
             // 
-            // label6
+            // lblGrupo
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label6.Location = new System.Drawing.Point(339, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 24);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "3ºBA";
+            this.lblGrupo.AutoSize = true;
+            this.lblGrupo.BackColor = System.Drawing.Color.Transparent;
+            this.lblGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblGrupo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrupo.ForeColor = System.Drawing.SystemColors.Menu;
+            this.lblGrupo.Location = new System.Drawing.Point(339, 0);
+            this.lblGrupo.Name = "lblGrupo";
+            this.lblGrupo.Size = new System.Drawing.Size(57, 24);
+            this.lblGrupo.TabIndex = 48;
+            this.lblGrupo.Text = "3ºBA";
             // 
             // label7
             // 
@@ -221,6 +221,7 @@ namespace Presentacion
             this.Name = "FormGruposA";
             this.Opacity = 0.9D;
             this.Text = "FormGruposA";
+            this.Load += new System.EventHandler(this.FormGruposA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -240,11 +241,11 @@ namespace Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblGrupo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtGrupos;
         public System.Windows.Forms.Button btnEnviarConsA;

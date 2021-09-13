@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Presentacion;
 using Dominio;
-using Datos;
+
 //AJP DEVELOPERS
 namespace Presentacion
 
@@ -215,7 +215,7 @@ namespace Presentacion
                     if (validLogin == true)
                     {
                         this.Hide();
-                        FormBienvenida bienvenida = new FormBienvenida();
+                        FormBienvenidaDocente bienvenida = new FormBienvenidaDocente();
                         bienvenida.ShowDialog();
                         FormPrincipal login = new FormPrincipal();
                         login.Show();

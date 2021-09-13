@@ -35,3 +35,6 @@ C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.For
 C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormPerfilD.resources
 C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormConsultasD.resources
 C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormBienvenidaDocente.resources
+C:\Users\alejo\source\repos\Proyecto2021\Presentacion\bin\Debug\Datos.dll
+C:\Users\alejo\source\repos\Proyecto2021\Presentacion\bin\Debug\MySql.Data.dll
+C:\Users\alejo\source\repos\Proyecto2021\Presentacion\bin\Debug\Datos.pdb

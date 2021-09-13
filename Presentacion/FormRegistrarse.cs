@@ -13,6 +13,10 @@ using System.Threading;
 using System.IO;
 using System.Collections;
 
+using MySql.Data.MySqlClient;
+using MySql.Data;
+
+
 
 namespace Presentacion
 {
@@ -264,6 +268,12 @@ namespace Presentacion
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
+            MySqlConnection conectar = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
+            conectar.Open();
+            MySqlConnection conectar1 = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
+            conectar1.Open();
+            MySqlConnection conectar2 = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
+            conectar2.Open();
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
             string cedula = txtCedula.Text;
@@ -274,43 +284,57 @@ namespace Presentacion
             
 
             // si los datos no estan ingresados se marcara que faltan datos
-            
-            if (nombre == "NOMBRE" && apellido == "APELLIDO")
-            {
-                msgError("faltan datos");
-            }
-            else if (cedula == "CEDULA" && grupo == "GRUPO")
-            {
-                msgError("faltan datos");
-            }
-            else if (contraseña == "CONTRASEÑA" && confircontraseña == "CONFIRMAR CONTRASEÑA")
-            {
-                msgError("faltan datos");
-            }
-            else if (confircontraseña != contraseña)
-            {
-                msgError("Las contraseñas no son iguales");
-            }
-            else
-            {
-               MessageBox.Show("Registrado con exito", "REGISTRO EXITOSO", MessageBoxButtons.OK , MessageBoxIcon.Information);
-            }
-            
           
 
 
-            Usuarios.usuario = usuario;
-            Usuarios.contraseña = contraseña;
-            Usuarios.cedula = cedula;
-            Usuarios.grupo = grupo;
-            Usuarios.nombre = nombre;
-            Usuarios.apellido = apellido;
-            
-                
-            
+            //BORRAR ESTE CODIGO 
+            ////Usuarios.usuario = usuario;
+            ////Usuarios.contraseña = contraseña;
+            ////Usuarios.cedula = cedula;
+            ////Usuarios.grupo = grupo;
+            ////Usuarios.nombre = nombre;
+            ////Usuarios.apellido = apellido;
+         
+                if (nombre == "NOMBRE" && apellido == "APELLIDO")
+                {
+                    msgError("faltan datos");
+                }
+                else if (cedula == "CEDULA" && grupo == "GRUPO")
+                {
+                    msgError("faltan datos");
+                }
+                else if (contraseña == "CONTRASEÑA" && confircontraseña == "CONFIRMAR CONTRASEÑA")
+                {
+                    msgError("faltan datos");
+                }
+                else if (confircontraseña != contraseña)
+                {
+                    msgError("Las contraseñas no son iguales");
+                }
+            try
+            {
+                MySqlCommand comando = new MySqlCommand("insert into usuario(ci, nombre, apellido, username, contraseña) values ('"+ txtCedula.Text +"','" + txtNombre.Text + "','" + txtApellido.Text + "','" +txtNombreUser.Text + "','" + txtContraseña.Text + "');", conectar);
+                comando.ExecuteNonQuery();
+                conectar.Close();
+                MySqlCommand comando1 = new MySqlCommand("insert into alumno(ci) values ('" + txtCedula.Text + "');", conectar1);
+              
+                comando1.ExecuteNonQuery();
+                conectar1.Close();
+               
+
+                MessageBox.Show("Registrado con exito", "REGISTRO EXITOSO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                msgError("No se pudo registrar correctamente");
+            }
+
            
 
-        }
+
+
+
+    }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {

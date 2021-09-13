@@ -13,7 +13,7 @@ namespace Datos
         private readonly string connectionString;
         public ConnectionToSql()
         {
-            connectionString = "Server = localhost; port = 3306; Database = empleados; Uid = root; pwd = 0312;";
+            connectionString = "Server = localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;";
         }
         protected MySqlConnection GetConnection()
         {

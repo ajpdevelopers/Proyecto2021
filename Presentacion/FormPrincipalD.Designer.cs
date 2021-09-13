@@ -31,15 +31,16 @@ namespace Presentacion
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormularios = new System.Windows.Forms.Panel();
-            this.btnEspañol = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnEspañol = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblGrupo = new System.Windows.Forms.Label();
             this.lblMateria = new System.Windows.Forms.Label();
             this.lblCedulaizq = new System.Windows.Forms.Label();
             this.lblNombreIzq = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnIngles = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnChat = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@ namespace Presentacion
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnIngles = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelContenedor.SuspendLayout();
             this.panelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -63,6 +64,7 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContenedor
@@ -88,22 +90,6 @@ namespace Presentacion
             this.panelFormularios.Size = new System.Drawing.Size(909, 487);
             this.panelFormularios.TabIndex = 2;
             // 
-            // btnEspañol
-            // 
-            this.btnEspañol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnEspañol.FlatAppearance.BorderSize = 0;
-            this.btnEspañol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnEspañol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEspañol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEspañol.ForeColor = System.Drawing.Color.LightGray;
-            this.btnEspañol.Location = new System.Drawing.Point(51, 466);
-            this.btnEspañol.Name = "btnEspañol";
-            this.btnEspañol.Size = new System.Drawing.Size(38, 21);
-            this.btnEspañol.TabIndex = 40;
-            this.btnEspañol.Text = "ES";
-            this.btnEspañol.UseVisualStyleBackColor = false;
-            this.btnEspañol.Click += new System.EventHandler(this.btnEspañol_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -119,9 +105,8 @@ namespace Presentacion
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.panelMenu.Controls.Add(this.btnEspañol);
+            this.panelMenu.Controls.Add(this.flowLayoutPanel1);
             this.panelMenu.Controls.Add(this.panel1);
-            this.panelMenu.Controls.Add(this.btnIngles);
             this.panelMenu.Controls.Add(this.btnCerrarSesion);
             this.panelMenu.Controls.Add(this.btnChat);
             this.panelMenu.Controls.Add(this.btnConsultas);
@@ -132,6 +117,22 @@ namespace Presentacion
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(194, 487);
             this.panelMenu.TabIndex = 1;
+            // 
+            // btnEspañol
+            // 
+            this.btnEspañol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnEspañol.FlatAppearance.BorderSize = 0;
+            this.btnEspañol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnEspañol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEspañol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEspañol.ForeColor = System.Drawing.Color.LightGray;
+            this.btnEspañol.Location = new System.Drawing.Point(3, 3);
+            this.btnEspañol.Name = "btnEspañol";
+            this.btnEspañol.Size = new System.Drawing.Size(38, 21);
+            this.btnEspañol.TabIndex = 40;
+            this.btnEspañol.Text = "ES";
+            this.btnEspañol.UseVisualStyleBackColor = false;
+            this.btnEspañol.Click += new System.EventHandler(this.btnEspañol_Click);
             // 
             // panel1
             // 
@@ -203,6 +204,22 @@ namespace Presentacion
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnIngles
+            // 
+            this.btnIngles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnIngles.FlatAppearance.BorderSize = 0;
+            this.btnIngles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnIngles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnIngles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngles.ForeColor = System.Drawing.Color.LightGray;
+            this.btnIngles.Location = new System.Drawing.Point(47, 3);
+            this.btnIngles.Name = "btnIngles";
+            this.btnIngles.Size = new System.Drawing.Size(38, 21);
+            this.btnIngles.TabIndex = 41;
+            this.btnIngles.Text = "EN";
+            this.btnIngles.UseVisualStyleBackColor = false;
+            this.btnIngles.Click += new System.EventHandler(this.btnIngles_Click);
             // 
             // btnCerrarSesion
             // 
@@ -372,21 +389,14 @@ namespace Presentacion
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnIngles
+            // flowLayoutPanel1
             // 
-            this.btnIngles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnIngles.FlatAppearance.BorderSize = 0;
-            this.btnIngles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnIngles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnIngles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngles.ForeColor = System.Drawing.Color.LightGray;
-            this.btnIngles.Location = new System.Drawing.Point(7, 466);
-            this.btnIngles.Name = "btnIngles";
-            this.btnIngles.Size = new System.Drawing.Size(38, 21);
-            this.btnIngles.TabIndex = 41;
-            this.btnIngles.Text = "EN";
-            this.btnIngles.UseVisualStyleBackColor = false;
-            this.btnIngles.Click += new System.EventHandler(this.btnIngles_Click);
+            this.flowLayoutPanel1.Controls.Add(this.btnEspañol);
+            this.flowLayoutPanel1.Controls.Add(this.btnIngles);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 458);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(94, 29);
+            this.flowLayoutPanel1.TabIndex = 42;
             // 
             // FormPrincipalD
             // 
@@ -413,6 +423,7 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -442,5 +453,6 @@ namespace Presentacion
         private System.Windows.Forms.Label lblGrupo;
         private System.Windows.Forms.Label lblMateria;
         private System.Windows.Forms.Button btnIngles;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
