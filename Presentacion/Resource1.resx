@@ -168,6 +168,9 @@
   <data name="lblSesionA" xml:space="preserve">
     <value>INICIO SESIÓN ALUMNO</value>
   </data>
+  <data name="lblSesionAdmin" xml:space="preserve">
+    <value>INICIO SESION ADMINISTRADOR</value>
+  </data>
   <data name="lblSesionD" xml:space="preserve">
     <value>INICIO SESIÓN DOCENTE</value>
   </data>

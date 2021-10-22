@@ -19,6 +19,7 @@ namespace Dominio
                 connection.Open();
                 using (var command = new MySqlCommand())
                 {
+
                     command.Connection = connection;
                     command.CommandText = "select *from usuario where Username=@user and contraseña=@pass";
                     command.Parameters.AddWithValue("@user", user);
@@ -35,6 +36,8 @@ namespace Dominio
                             UserCache.usuario = reader.GetString(3);
                             UserCache.contraseña = reader.GetString(4);
                             //UserCache.grupo = reader.GetString(5);
+                            //UserCache.imagendeperfil = reader.GetString(6);
+
 
                         }
                         return true;
@@ -43,6 +46,7 @@ namespace Dominio
                         return false;
                 }
             }
+        
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading;
+using Dominio;
 
 namespace Presentacion
 {
@@ -70,11 +71,11 @@ namespace Presentacion
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            lblNombreIzq.Text = Usuarios.nombre + " " + Usuarios.apellido;
-            lblGrupoizq.Text = Usuarios.grupo;
-            lblCedulaizq.Text = Usuarios.cedula;
+            lblNombreIzq.Text = UserCache.nombre + " " + UserCache.apellido;
+            //lblGrupoizq.Text = Usercache.grupo;
+            lblCedulaizq.Text = Convert.ToString(UserCache.cedula);    
             pictureBox1.Image = (Image)Usuarios.imagen;            
-
+           
 
         }
 

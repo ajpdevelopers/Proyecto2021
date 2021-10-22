@@ -14,5 +14,6 @@ namespace Dominio
         public static string nombre { get; set; }
         public static string apellido { get; set; }
         public static string grupo { get; set; }
+        public static string imagendeperfil { get; set; }
     }
 }

@@ -214,6 +214,15 @@ namespace Presentacion {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a INICIO SESION ADMINISTRADOR.
+        /// </summary>
+        internal static string lblSesionAdmin {
+            get {
+                return ResourceManager.GetString("lblSesionAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a INICIO SESIÓN DOCENTE.
         /// </summary>
         internal static string lblSesionD {
