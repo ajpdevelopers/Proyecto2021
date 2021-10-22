@@ -22,7 +22,7 @@ namespace Presentacion
         {
             InitializeComponent();
            
-            
+
         }
         
         // codigo para poder arrastrar formularios, utilizando dll de windows.
@@ -248,6 +248,11 @@ namespace Presentacion
             txtContraseña.UseSystemPasswordChar = true;
             pictureBoxOcultar.Visible = true;
             pictureBox3.Visible = false;
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

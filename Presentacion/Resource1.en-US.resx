@@ -168,6 +168,9 @@
   <data name="lblSesionA" xml:space="preserve">
     <value>LOGIN STUDENT</value>
   </data>
+  <data name="lblSesionAdmin" xml:space="preserve">
+    <value>LOGIN ADMIN</value>
+  </data>
   <data name="lblSesionD" xml:space="preserve">
     <value>LOGIN TEACHER</value>
   </data>

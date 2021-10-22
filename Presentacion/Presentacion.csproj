@@ -57,6 +57,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBienvenidaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBienvenidaAdmin.Designer.cs">
+      <DependentUpon>FormBienvenidaAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBienvenidaDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     <Compile Include="FormRegistrarseDocente.Designer.cs">
       <DependentUpon>FormRegistrarseDocente.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAdmin.Designer.cs">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuariosDocente.cs" />
+    <EmbeddedResource Include="FormBienvenidaAdmin.resx">
+      <DependentUpon>FormBienvenidaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBienvenidaDocente.resx">
       <DependentUpon>FormBienvenidaDocente.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistrarseDocente.resx">
       <DependentUpon>FormRegistrarseDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAdmin.resx">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginAlumno.resx">
       <DependentUpon>LoginAlumno.cs</DependentUpon>

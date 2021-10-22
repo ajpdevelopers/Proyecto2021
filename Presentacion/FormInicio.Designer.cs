@@ -36,7 +36,7 @@ namespace Presentacion
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblInicio = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnAdmin = new System.Windows.Forms.Button();
             this.btnAlumno = new System.Windows.Forms.Button();
             this.btnDocente = new System.Windows.Forms.Button();
             this.btnEspañol = new System.Windows.Forms.Button();
@@ -130,21 +130,21 @@ namespace Presentacion
             this.panel2.Size = new System.Drawing.Size(381, 1);
             this.panel2.TabIndex = 12;
             // 
-            // btnRegistrar
+            // btnAdmin
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnRegistrar.Location = new System.Drawing.Point(149, 117);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(107, 37);
-            this.btnRegistrar.TabIndex = 26;
-            this.btnRegistrar.Text = "ADMINISTRADOR";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.btnAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.ForeColor = System.Drawing.Color.LightGray;
+            this.btnAdmin.Location = new System.Drawing.Point(149, 117);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(107, 37);
+            this.btnAdmin.TabIndex = 26;
+            this.btnAdmin.Text = "ADMINISTRADOR";
+            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnAlumno
             // 
@@ -220,7 +220,7 @@ namespace Presentacion
             this.Controls.Add(this.btnIngles);
             this.Controls.Add(this.btnDocente);
             this.Controls.Add(this.btnAlumno);
-            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblInicio);
             this.Controls.Add(this.panel1);
@@ -247,7 +247,7 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblInicio;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Button btnAlumno;
         private System.Windows.Forms.Button btnDocente;
         private System.Windows.Forms.PictureBox pictureBox2;

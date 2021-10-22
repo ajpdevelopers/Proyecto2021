@@ -28,7 +28,7 @@ namespace Presentacion
             
             lblInicio.Text = Resource1.lblInicio;
             btnAlumno.Text = Resource1.btnAlumno;
-            btnRegistrar.Text = Resource1.btnRegistrar;
+            btnAdmin.Text = Resource1.btnRegistrar;
             btnDocente.Text = Resource1.btnDocente;
         }
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -68,7 +68,9 @@ namespace Presentacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
+            LoginAdmin FormInicio = new LoginAdmin();
+            FormInicio.Show();
+            this.Hide();
         }
 
         private void btnIngles_Click(object sender, EventArgs e)
