@@ -40,3 +40,6 @@ C:\Users\alejo\source\repos\Proyecto2021\Presentacion\bin\Debug\MySql.Data.dll
 C:\Users\alejo\source\repos\Proyecto2021\Presentacion\bin\Debug\Datos.pdb
 C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormBienvenidaAdmin.resources
 C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.LoginAdmin.resources
+C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormPrincipalAdmin.resources
+C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormPerfilAdmin.resources
+C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormGruposAdmin.resources

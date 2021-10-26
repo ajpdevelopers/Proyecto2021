@@ -60,5 +60,10 @@ namespace Presentacion
         {
 
         }
+
+        private void circularProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

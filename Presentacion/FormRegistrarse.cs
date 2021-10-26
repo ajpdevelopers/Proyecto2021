@@ -274,6 +274,7 @@ namespace Presentacion
             conectar1.Open();
             MySqlConnection conectar2 = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
             conectar2.Open();
+
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
             string cedula = txtCedula.Text;
@@ -313,10 +314,10 @@ namespace Presentacion
                 }
             try
             {
-                MySqlCommand comando = new MySqlCommand("insert into usuario(ci, nombre, apellido, username, contraseña) values ('"+ txtCedula.Text +"','" + txtNombre.Text + "','" + txtApellido.Text + "','" +txtNombreUser.Text + "','" + txtContraseña.Text + "');", conectar);
+                MySqlCommand comando = new MySqlCommand("insert into usuario(ci, nombre, apellido, username, contraseña, estado) values ('"+ txtCedula.Text +"','" + txtNombre.Text + "','" + txtApellido.Text + "','" +txtNombreUser.Text + "','" + txtContraseña.Text + "','" + "1" + "');", conectar);
                 comando.ExecuteNonQuery();
                 conectar.Close();
-                MySqlCommand comando1 = new MySqlCommand("insert into alumno(ci) values ('" + txtCedula.Text + "');", conectar1);
+                MySqlCommand comando1 = new MySqlCommand("insert into alumno(ci, estado ) values ('" + txtCedula.Text + "','" + "1" + "');", conectar1);
               
                 comando1.ExecuteNonQuery();
                 conectar1.Close();

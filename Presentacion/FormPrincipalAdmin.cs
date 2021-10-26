@@ -10,20 +10,13 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Dominio;
-
 namespace Presentacion
 {
-    public partial class FormPrincipal : Form
+    public partial class FormPrincipalAdmin : Form
     {
-
-        public FormPrincipal()
+        public FormPrincipalAdmin()
         {
-
             InitializeComponent();
-           
-            //Estas lineas eliminan los parpadeos del formulario 
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
-            this.DoubleBuffered = true;
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -56,7 +49,7 @@ namespace Presentacion
             var region = new Region(new Rectangle(0, 0, this.ClientRectangle.Width, this.ClientRectangle.Height));
             sizeGripRectangle = new Rectangle(this.ClientRectangle.Width - tolerance, this.ClientRectangle.Height - tolerance, tolerance, tolerance);
             region.Exclude(sizeGripRectangle);
-            this.panelContenedor.Region = region;
+            
             this.Invalidate();
         }
         //COLOR DE RECTANGULO INFERIOR
@@ -67,31 +60,18 @@ namespace Presentacion
             base.OnPaint(e);
             ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
         }
-       
-
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
-            lblNombreIzq.Text = UserCache.nombre + " " + UserCache.apellido;
-            //lblGrupoizq.Text = Usercache.grupo;
-            lblCedulaizq.Text = Convert.ToString(UserCache.cedula);    
-            pictureBox1.Image = (Image)Usuarios.imagen;            
-           
-
-        }
-
         public void cargaridioma()
         {
 
             lblPrincipal.Text = Resource1.lblPrincipal;
             btnPerfil.Text = Resource1.btnPerfil;
             btnGrupos.Text = Resource1.btnGrupos;
-            btnChat.Text = Resource1.btnChat;
             btnConsultas.Text = Resource1.btnConsultas;
             btnCerrarSesion.Text = Resource1.btnCerrarSesion;
-           
-        }
 
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        }
+        
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }
@@ -100,16 +80,41 @@ namespace Presentacion
         {
             Application.Exit();
         }
-        //Capturar posicion y tamaño antes de maximizar para restaurar
         int lx, ly;
         int sw, sh;
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            //con esto esconderemos un boton u otro segun la necesidad
+            btnMaximizar.Visible = true;
+            btnRestaurar.Visible = false;
+            this.Size = new Size(sw, sh);
+            this.Location = new Point(lx, ly);
+        }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void FormPrincipal_MouseDown(object sender, MouseEventArgs e)
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<FormPerfilAdmin>();
+            btnPerfil.BackColor = Color.FromArgb(12, 61, 92);
+            lblPrincipal.Text = "Perfil";
+            btnEspañol.Visible = false;
+            btnIngles.Visible = false;
+        }
+
+        private void btnGrupos_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<FormGruposAdmin>();
+            btnGrupos.BackColor = Color.FromArgb(12, 61, 92);
+            lblPrincipal.Text = "Grupos";
+            btnEspañol.Visible = false;
+            btnIngles.Visible = false;
+        }
+
+        private void FormPrincipalAdmin_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -127,58 +132,16 @@ namespace Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void panelFormularios_MouseMove(object sender, MouseEventArgs e)
+        private void FormPrincipalAdmin_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnRestaurar_Click(object sender, EventArgs e)
+        private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
         {
-            //con esto esconderemos un boton u otro segun la necesidad
-            btnMaximizar.Visible = true;
-            btnRestaurar.Visible = false;
-            this.Size = new Size(sw, sh);
-            this.Location = new Point(lx, ly);
-        }
-
-       
-
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            AbrirFormularios<FormPerfilA>();
-            btnPerfil.BackColor = Color.FromArgb(12, 61, 92);
-            lblPrincipal.Text = "Perfil";
-            btnEspañol.Visible = false;
-            btnIngles.Visible = false;
-        }
-
-        private void btnGrupos_Click(object sender, EventArgs e)
-        {
-            AbrirFormularios<FormGruposA>();
-            btnGrupos.BackColor = Color.FromArgb(12, 61, 92);
-            lblPrincipal.Text = "Grupos";
-            btnEspañol.Visible = false;
-            btnIngles.Visible = false;
-        }
-
-        private void btnConsultas_Click(object sender, EventArgs e)
-        {
-            AbrirFormularios<FormConsultasA>();
-            btnConsultas.BackColor = Color.FromArgb(12, 61, 92);
-            lblPrincipal.Text = "Consultas";
-            btnEspañol.Visible = false;
-            btnIngles.Visible = false;
-
-        }
-
-        private void btnChat_Click(object sender, EventArgs e)
-        {
-            AbrirFormularios<FormChatA>();
-            btnChat.BackColor = Color.FromArgb(12, 61, 92);
-            lblPrincipal.Text = "Chat";
-            btnEspañol.Visible = false;
-            btnIngles.Visible = false;
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
@@ -194,15 +157,13 @@ namespace Presentacion
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btnConsultas_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            AbrirFormularios<FormPerfilA>();
-            btnPerfil.BackColor = Color.FromArgb(12, 61, 92);
+            AbrirFormularios<FormConsultasA>();
+            btnConsultas.BackColor = Color.FromArgb(12, 61, 92);
+            lblPrincipal.Text = "Consultas";
+            btnEspañol.Visible = false;
+            btnIngles.Visible = false;
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -211,41 +172,25 @@ namespace Presentacion
                 this.Close();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnIngles_Click(object sender, EventArgs e)
+        private void FormPrincipalAdmin_Load(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
-            cargaridioma();
-        }
-
-        private void btnEspañol_Click(object sender, EventArgs e)
-        {
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("es-ES");
-            cargaridioma();
-        }
-
-        private void lblPrincipal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelContenedor_MouseMove(object sender, MouseEventArgs e)
-        {
-
+            lblNombreIzq.Text = UserCache.nombre + " " + UserCache.apellido;
+            //lblGrupoizq.Text = Usercache.grupo;
+            lblCedulaizq.Text = Convert.ToString(UserCache.cedula);
+            pictureBox1.Image = (Image)Usuarios.imagen;
         }
 
         private void cerrarformularios(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms["FormPerfilA"] == null)
-            btnPerfil.BackColor = Color.FromArgb(4, 41, 68);
+                btnPerfil.BackColor = Color.FromArgb(4, 41, 68);
             lblPrincipal.Text = " ";
-            if (Application.OpenForms["FormChatA"] == null)
-                btnChat.BackColor = Color.FromArgb(4, 41, 68);
-            lblPrincipal.Text = " ";
+   
             if (Application.OpenForms["FormGruposA"] == null)
                 btnGrupos.BackColor = Color.FromArgb(4, 41, 68);
             lblPrincipal.Text = " ";
@@ -253,12 +198,11 @@ namespace Presentacion
                 btnConsultas.BackColor = Color.FromArgb(4, 41, 68);
             lblPrincipal.Text = " ";
         }
-        
-        //creare metodos para abrir otros formularios en el panel
-        private void AbrirFormularios <MiForm>()where MiForm : Form, new(){
+        private void AbrirFormularios<MiForm>() where MiForm : Form, new()
+        {
             Form formulario;
             formulario = panelFormularios.Controls.OfType<MiForm>().FirstOrDefault(); //buscamos el formulario
-             if(formulario == null)
+            if (formulario == null)
             {
                 formulario = new MiForm();
                 formulario.TopLevel = false;
@@ -270,13 +214,12 @@ namespace Presentacion
                 formulario.BringToFront();
                 formulario.FormClosed += new FormClosedEventHandler(cerrarformularios);
             }
-             else
-             //si existe 
+            else
+            //si existe 
             {
                 formulario.BringToFront();
             }
 
         }
-
     }
 }

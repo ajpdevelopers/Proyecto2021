@@ -57,6 +57,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormGruposAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGruposAdmin.Designer.cs">
+      <DependentUpon>FormGruposAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPerfilAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPerfilAdmin.Designer.cs">
+      <DependentUpon>FormPerfilAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipalAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipalAdmin.Designer.cs">
+      <DependentUpon>FormPrincipalAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBienvenidaAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,8 +205,17 @@
     <EmbeddedResource Include="FormConsultasD.resx">
       <DependentUpon>FormConsultasD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGruposAdmin.resx">
+      <DependentUpon>FormGruposAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPerfilAdmin.resx">
+      <DependentUpon>FormPerfilAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPerfilD.resx">
       <DependentUpon>FormPerfilD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipalAdmin.resx">
+      <DependentUpon>FormPrincipalAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipalD.resx">
       <DependentUpon>FormPrincipalD.cs</DependentUpon>

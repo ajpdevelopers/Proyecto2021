@@ -22,6 +22,21 @@ namespace Presentacion
 
         }
 
+        
+
+        private void FormBienvenidaAdmin_Load(object sender, EventArgs e)
+        {
+            lblUser.Text = "Administrador";
+            //fotoBienvenida.Image = (Image)Usuarios.imagen;
+
+            this.Opacity = 0.0;
+            circularProgressBar1.Value = 0;
+            circularProgressBar1.Minimum = 0;
+            circularProgressBar1.Maximum = 100;
+
+            timer1.Start();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (this.Opacity < 1) this.Opacity += 0.05;
@@ -42,19 +57,6 @@ namespace Presentacion
                 timer2.Stop();
                 this.Close();
             }
-        }
-
-        private void FormBienvenidaAdmin_Load(object sender, EventArgs e)
-        {
-            lblUser.Text = "Administrador";
-            //fotoBienvenida.Image = (Image)Usuarios.imagen;
-
-            this.Opacity = 0.0;
-            circularProgressBar1.Value = 0;
-            circularProgressBar1.Minimum = 0;
-            circularProgressBar1.Maximum = 100;
-
-            timer1.Start();
         }
     }
 }

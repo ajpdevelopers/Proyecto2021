@@ -36,8 +36,8 @@ namespace Presentacion
             {
                 if (txtContraseña.Text != "CONTRASEÑA")
                 {
-                    UserModel user = new UserModel();
-                    var validLogin = user.LoginUser(txtUsuario.Text, txtContraseña.Text);
+                    UserModel2 user = new UserModel2();
+                    var validLogin = user.LoginUser(Convert.ToInt32(txtUsuario.Text), txtContraseña.Text);
                     if (validLogin == true)
                     {
                         this.Hide();

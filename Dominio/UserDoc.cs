@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
-using MySql.Data;
 using Datos;
 
 namespace Dominio
 {
-    public class UserDao : ConnectionToSql
+    class UserDoc : ConnectionToSql
     {
         public bool Login(int Ci, string pass)
         {
@@ -21,7 +20,7 @@ namespace Dominio
                 {
 
                     command.Connection = connection;
-                    command.CommandText = "select * from usuario u, alumno a where u.Ci=a.Ci and contraseña=@pass and  a.estado = 1";
+                    command.CommandText = "select * from usuario u, docente d where u.Ci=d.Ci and contraseña=@pass and d.estado = 1";
                     command.Parameters.AddWithValue("@Ci", Ci);
                     command.Parameters.AddWithValue("@pass", pass);
                     command.CommandType = CommandType.Text;
@@ -46,7 +45,6 @@ namespace Dominio
                         return false;
                 }
             }
-        
         }
-    }
+}
 }

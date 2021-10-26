@@ -395,10 +395,10 @@ namespace Presentacion
 
             try
             {
-                MySqlCommand comando = new MySqlCommand("insert into usuario(ci, nombre, apellido, username, contraseña) values ('" + txtCedula.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtNombreUser.Text + "','" + txtContraseña.Text + "');", conectar);
+                MySqlCommand comando = new MySqlCommand("insert into usuario(ci, nombre, apellido, username, contraseña, estado) values ('" + txtCedula.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtNombreUser.Text + "','" + txtContraseña.Text + "','" + "1" + "');", conectar);
                 comando.ExecuteNonQuery();
                 conectar.Close();
-                MySqlCommand comando1 = new MySqlCommand("insert into docente(ci) values ('" + txtCedula.Text + "');", conectar1);
+                MySqlCommand comando1 = new MySqlCommand("insert into docente(ci, estado ) values ('" + txtCedula.Text + "','" + "1" + "');", conectar1);
                 comando1.ExecuteNonQuery();
                 conectar1.Close();
 
