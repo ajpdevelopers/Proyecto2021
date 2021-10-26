@@ -26,14 +26,14 @@ namespace Presentacion
             {
                 if (txtContraseña.Text != "CONTRASEÑA")
                 {
-                    UserModel user = new UserModel();
-                    var validLogin = user.LoginUser(txtUsuario.Text, txtContraseña.Text);
+                    Usermodel3 user = new Usermodel3();
+                    var validLogin = user.LoginUser(Convert.ToInt32(txtUsuario.Text), txtContraseña.Text);
                     if (validLogin == true)
                     {
                         this.Hide();
                         FormBienvenidaAdmin bienvenida = new FormBienvenidaAdmin();
                         bienvenida.ShowDialog();
-                        FormPrincipal login = new FormPrincipal();
+                        FormPrincipalAdmin login = new FormPrincipalAdmin();
                         login.Show();
                         login.FormClosed += cerrarsesion;
                         this.Hide();

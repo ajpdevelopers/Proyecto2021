@@ -315,6 +315,7 @@ namespace Presentacion
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginAdmin";
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginAdmin";
             this.Load += new System.EventHandler(this.LoginAdmin_Load);

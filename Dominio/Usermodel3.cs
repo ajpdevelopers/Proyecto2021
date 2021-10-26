@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Datos;
 
 namespace Dominio
 {
-    public class UserModel
+  public class Usermodel3
     {
-        UserDao userDao = new UserDao();
+        UserDadmin userDadmin = new UserDadmin();
         public bool LoginUser(int Ci, string pass)
         {
-            return userDao.Login(Ci, pass);
+            return userDadmin.Login(Ci, pass);
         }
     }
 }
 
-
-    

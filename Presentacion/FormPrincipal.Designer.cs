@@ -31,15 +31,15 @@ namespace Presentacion
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormularios = new System.Windows.Forms.Panel();
-            this.btnEspañol = new System.Windows.Forms.Button();
-            this.btnIngles = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnEspañol = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCedulaizq = new System.Windows.Forms.Label();
             this.lblGrupoizq = new System.Windows.Forms.Label();
             this.lblNombreIzq = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnIngles = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnChat = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
@@ -76,6 +76,7 @@ namespace Presentacion
             this.panelContenedor.Size = new System.Drawing.Size(1103, 542);
             this.panelContenedor.TabIndex = 0;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
+            this.panelContenedor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelContenedor_MouseMove);
             // 
             // panelFormularios
             // 
@@ -87,38 +88,6 @@ namespace Presentacion
             this.panelFormularios.Size = new System.Drawing.Size(909, 487);
             this.panelFormularios.TabIndex = 2;
             this.panelFormularios.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelFormularios_MouseMove);
-            // 
-            // btnEspañol
-            // 
-            this.btnEspañol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnEspañol.FlatAppearance.BorderSize = 0;
-            this.btnEspañol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnEspañol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEspañol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEspañol.ForeColor = System.Drawing.Color.LightGray;
-            this.btnEspañol.Location = new System.Drawing.Point(47, 466);
-            this.btnEspañol.Name = "btnEspañol";
-            this.btnEspañol.Size = new System.Drawing.Size(38, 21);
-            this.btnEspañol.TabIndex = 40;
-            this.btnEspañol.Text = "ES";
-            this.btnEspañol.UseVisualStyleBackColor = false;
-            this.btnEspañol.Click += new System.EventHandler(this.btnEspañol_Click);
-            // 
-            // btnIngles
-            // 
-            this.btnIngles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnIngles.FlatAppearance.BorderSize = 0;
-            this.btnIngles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnIngles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnIngles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngles.ForeColor = System.Drawing.Color.LightGray;
-            this.btnIngles.Location = new System.Drawing.Point(3, 466);
-            this.btnIngles.Name = "btnIngles";
-            this.btnIngles.Size = new System.Drawing.Size(38, 21);
-            this.btnIngles.TabIndex = 41;
-            this.btnIngles.Text = "EN";
-            this.btnIngles.UseVisualStyleBackColor = false;
-            this.btnIngles.Click += new System.EventHandler(this.btnIngles_Click);
             // 
             // pictureBox3
             // 
@@ -150,6 +119,22 @@ namespace Presentacion
             this.panelMenu.Size = new System.Drawing.Size(194, 487);
             this.panelMenu.TabIndex = 1;
             this.panelMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseMove);
+            // 
+            // btnEspañol
+            // 
+            this.btnEspañol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnEspañol.FlatAppearance.BorderSize = 0;
+            this.btnEspañol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnEspañol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEspañol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEspañol.ForeColor = System.Drawing.Color.LightGray;
+            this.btnEspañol.Location = new System.Drawing.Point(47, 466);
+            this.btnEspañol.Name = "btnEspañol";
+            this.btnEspañol.Size = new System.Drawing.Size(38, 21);
+            this.btnEspañol.TabIndex = 40;
+            this.btnEspañol.Text = "ES";
+            this.btnEspañol.UseVisualStyleBackColor = false;
+            this.btnEspañol.Click += new System.EventHandler(this.btnEspañol_Click);
             // 
             // panel1
             // 
@@ -207,6 +192,22 @@ namespace Presentacion
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnIngles
+            // 
+            this.btnIngles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnIngles.FlatAppearance.BorderSize = 0;
+            this.btnIngles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnIngles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnIngles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngles.ForeColor = System.Drawing.Color.LightGray;
+            this.btnIngles.Location = new System.Drawing.Point(3, 466);
+            this.btnIngles.Name = "btnIngles";
+            this.btnIngles.Size = new System.Drawing.Size(38, 21);
+            this.btnIngles.TabIndex = 41;
+            this.btnIngles.Text = "EN";
+            this.btnIngles.UseVisualStyleBackColor = false;
+            this.btnIngles.Click += new System.EventHandler(this.btnIngles_Click);
             // 
             // btnCerrarSesion
             // 

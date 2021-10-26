@@ -91,7 +91,7 @@ namespace Presentacion
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(235, 80);
+            this.label2.Location = new System.Drawing.Point(235, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 24);
             this.label2.TabIndex = 2;
@@ -103,7 +103,7 @@ namespace Presentacion
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(235, 122);
+            this.label3.Location = new System.Drawing.Point(235, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 24);
             this.label3.TabIndex = 3;
@@ -115,7 +115,7 @@ namespace Presentacion
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(234, 165);
+            this.label4.Location = new System.Drawing.Point(234, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 24);
             this.label4.TabIndex = 4;
@@ -127,7 +127,7 @@ namespace Presentacion
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(234, 251);
+            this.label5.Location = new System.Drawing.Point(234, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(228, 24);
             this.label5.TabIndex = 5;
@@ -139,7 +139,7 @@ namespace Presentacion
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(235, 208);
+            this.label7.Location = new System.Drawing.Point(235, 196);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 24);
             this.label7.TabIndex = 7;
@@ -152,7 +152,7 @@ namespace Presentacion
             this.lblUsuarioPerfilA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUsuarioPerfilA.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioPerfilA.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblUsuarioPerfilA.Location = new System.Drawing.Point(237, 104);
+            this.lblUsuarioPerfilA.Location = new System.Drawing.Point(237, 92);
             this.lblUsuarioPerfilA.Name = "lblUsuarioPerfilA";
             this.lblUsuarioPerfilA.Size = new System.Drawing.Size(61, 18);
             this.lblUsuarioPerfilA.TabIndex = 8;
@@ -165,7 +165,7 @@ namespace Presentacion
             this.lblNombreA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombreA.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreA.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblNombreA.Location = new System.Drawing.Point(237, 147);
+            this.lblNombreA.Location = new System.Drawing.Point(237, 135);
             this.lblNombreA.Name = "lblNombreA";
             this.lblNombreA.Size = new System.Drawing.Size(62, 18);
             this.lblNombreA.TabIndex = 9;
@@ -178,7 +178,7 @@ namespace Presentacion
             this.lblApellidoA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblApellidoA.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidoA.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblApellidoA.Location = new System.Drawing.Point(237, 190);
+            this.lblApellidoA.Location = new System.Drawing.Point(237, 178);
             this.lblApellidoA.Name = "lblApellidoA";
             this.lblApellidoA.Size = new System.Drawing.Size(64, 18);
             this.lblApellidoA.TabIndex = 10;
@@ -191,7 +191,7 @@ namespace Presentacion
             this.lblGrupoA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblGrupoA.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGrupoA.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblGrupoA.Location = new System.Drawing.Point(237, 233);
+            this.lblGrupoA.Location = new System.Drawing.Point(237, 221);
             this.lblGrupoA.Name = "lblGrupoA";
             this.lblGrupoA.Size = new System.Drawing.Size(50, 18);
             this.lblGrupoA.TabIndex = 11;
@@ -204,7 +204,7 @@ namespace Presentacion
             this.lblCedulaA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCedulaA.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedulaA.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblCedulaA.Location = new System.Drawing.Point(237, 278);
+            this.lblCedulaA.Location = new System.Drawing.Point(237, 266);
             this.lblCedulaA.Name = "lblCedulaA";
             this.lblCedulaA.Size = new System.Drawing.Size(55, 18);
             this.lblCedulaA.TabIndex = 12;
@@ -216,7 +216,7 @@ namespace Presentacion
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(26, 300);
+            this.label12.Location = new System.Drawing.Point(26, 288);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(261, 24);
             this.label12.TabIndex = 13;
@@ -389,7 +389,7 @@ namespace Presentacion
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(-2, 404);
+            this.label13.Location = new System.Drawing.Point(-2, 392);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(377, 18);
             this.label13.TabIndex = 21;
@@ -402,7 +402,7 @@ namespace Presentacion
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCargar.Location = new System.Drawing.Point(369, 400);
+            this.btnCargar.Location = new System.Drawing.Point(369, 388);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(134, 29);
             this.btnCargar.TabIndex = 26;
@@ -430,7 +430,7 @@ namespace Presentacion
             // 
             this.btnavatar4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnavatar4.Image = global::Presentacion.Properties.Resources.female_avatar_woman_profile_icon_for_network_vector;
-            this.btnavatar4.Location = new System.Drawing.Point(320, 327);
+            this.btnavatar4.Location = new System.Drawing.Point(320, 315);
             this.btnavatar4.Name = "btnavatar4";
             this.btnavatar4.Size = new System.Drawing.Size(95, 67);
             this.btnavatar4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -441,7 +441,7 @@ namespace Presentacion
             // pictureDef
             // 
             this.pictureDef.Image = global::Presentacion.Properties.Resources.PerfilG;
-            this.pictureDef.Location = new System.Drawing.Point(1, 79);
+            this.pictureDef.Location = new System.Drawing.Point(1, 67);
             this.pictureDef.Name = "pictureDef";
             this.pictureDef.Size = new System.Drawing.Size(238, 217);
             this.pictureDef.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -452,7 +452,7 @@ namespace Presentacion
             // 
             this.btnavatar3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnavatar3.Image = global::Presentacion.Properties.Resources.descarga__4_;
-            this.btnavatar3.Location = new System.Drawing.Point(219, 327);
+            this.btnavatar3.Location = new System.Drawing.Point(219, 315);
             this.btnavatar3.Name = "btnavatar3";
             this.btnavatar3.Size = new System.Drawing.Size(95, 67);
             this.btnavatar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -464,7 +464,7 @@ namespace Presentacion
             // 
             this.btnavatar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnavatar2.Image = global::Presentacion.Properties.Resources.blond_woman_avatar_profile_icon_of_smiling_girl_vector;
-            this.btnavatar2.Location = new System.Drawing.Point(115, 327);
+            this.btnavatar2.Location = new System.Drawing.Point(115, 315);
             this.btnavatar2.Name = "btnavatar2";
             this.btnavatar2.Size = new System.Drawing.Size(95, 67);
             this.btnavatar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -486,7 +486,7 @@ namespace Presentacion
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1, 79);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 67);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(238, 217);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
