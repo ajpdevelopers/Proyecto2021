@@ -54,7 +54,7 @@ namespace Presentacion
             this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
@@ -71,9 +71,9 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnVolver);
-            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -277,7 +277,7 @@ namespace Presentacion
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.Control;
-            this.panel7.Controls.Add(this.listBox1);
+            this.panel7.Controls.Add(this.panel10);
             this.panel7.Controls.Add(this.txtChatA);
             this.panel7.Controls.Add(this.btnEnviar);
             this.panel7.Controls.Add(this.panel9);
@@ -346,14 +346,12 @@ namespace Presentacion
             this.label11.TabIndex = 7;
             this.label11.Text = "NOMBRE Y APELLIDO ";
             // 
-            // listBox1
+            // panel10
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(663, 342);
-            this.listBox1.TabIndex = 21;
+            this.panel10.Location = new System.Drawing.Point(7, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(653, 338);
+            this.panel10.TabIndex = 21;
             // 
             // FormChatA
             // 
@@ -418,6 +416,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Panel panel10;
     }
 }

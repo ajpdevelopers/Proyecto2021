@@ -239,8 +239,9 @@ namespace Presentacion
             this.LimpiarConsA.Name = "LimpiarConsA";
             this.LimpiarConsA.Size = new System.Drawing.Size(107, 37);
             this.LimpiarConsA.TabIndex = 63;
-            this.LimpiarConsA.Text = "LIMPIAR";
+            this.LimpiarConsA.Text = "MOSTRAR";
             this.LimpiarConsA.UseVisualStyleBackColor = false;
+            this.LimpiarConsA.Click += new System.EventHandler(this.LimpiarConsA_Click);
             // 
             // btnEnviarConsA
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
+using MySql.Data.MySqlClient;
 
 namespace Presentacion
 {
@@ -25,7 +26,7 @@ namespace Presentacion
             pictureDef.Image = btnavatar1.Image;
             pictureBox1.Image = btnavatar1.Image;
             //con esto al volver iniciar sesion con este usuario la imagen quedara guardada.
-            Usuarios.imagen = pictureDef.Image;
+            //Usuarios.imagen = pictureDef.Image;
 
         }
 
@@ -34,7 +35,7 @@ namespace Presentacion
             pictureDef.Image = btnavatar2.Image;
             pictureBox1.Image = btnavatar2.Image;
             //con esto al volver iniciar sesion con este usuario la imagen quedara guardada.
-            Usuarios.imagen = pictureDef.Image;
+            //Usuarios.imagen = pictureDef.Image;
         }
 
         private void btnavatar3_Click(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace Presentacion
             pictureDef.Image = btnavatar3.Image;
             pictureBox1.Image = btnavatar3.Image;
             //con esto al volver iniciar sesion con este usuario la imagen quedara guardada.
-            Usuarios.imagen = pictureDef.Image;
+            //Usuarios.imagen = pictureDef.Image;
         }
 
         private void btnavatar4_Click(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace Presentacion
 
             pictureBox1.Visible = false;
             //con esto al volver iniciar sesion con este usuario la imagen quedara guardada.
-            Usuarios.imagen = pictureDef.Image;
+            //Usuarios.imagen = pictureDef.Image;
         }
 
         
@@ -72,7 +73,7 @@ namespace Presentacion
             }
             try { 
             pictureDef.Image = Image.FromFile(abririmagen.FileName);
-            Usuarios.imagen = pictureDef.Image;
+            //Usuarios.imagen = pictureDef.Image;
             }
             catch
             {
@@ -123,8 +124,8 @@ namespace Presentacion
             txtEditPass.Text = UserCache.contraseña;
             txtEditpass2.UseSystemPasswordChar = true;
             txtEditpass2.Text = UserCache.contraseña;
-            pictureDef.Image = (Image)Usuarios.imagen;
-            pictureBox1.Image =(Image)Usuarios.imagen;
+            //pictureDef.Image = (Image)Usuarios.imagen;
+            //pictureBox1.Image =(Image)Usuarios.imagen;
 
 
 
@@ -136,19 +137,40 @@ namespace Presentacion
 
         private void linkEditarPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            btnGuardar.Visible = false;
+            btnGuardarContraseña.Visible = true;
             txtEditPass.Enabled = true;
             txtEditpass2.Enabled = true;
+            txtEditUsuario.Enabled = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-             
-            Usuarios.usuario = txtEditUsuario.Text;
-            Usuarios.contraseña = txtEditpass2.Text;
-            lblUsuarioPerfilA.Text = Usuarios.usuario;
-            txtEditPass.Enabled = false;
-            txtEditpass2.Enabled = false;
+            
+           
+            MySqlConnection conectar = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
+            try
+            {
+            
+                conectar.Open();
+                MySqlCommand comando = new MySqlCommand("update usuario set Username ='" + txtEditUsuario.Text + "'where Ci = '" + UserCache.cedula + "'", conectar);
+                comando.ExecuteNonQuery();
+                UserCache.usuario = txtEditUsuario.Text;
+                UserCache.contraseña = txtEditpass2.Text;
+                lblUsuarioPerfilA.Text = UserCache.usuario;
+                txtEditPass.Enabled = false;
+                txtEditpass2.Enabled = false;
+                conectar.Close();
+                MessageBox.Show("Se ha modificado correctamente el nombre de usuario", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
+
+
+            }
+            catch
+            {
+                MessageBox.Show("No se ha podido realizar la operacion", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
 
@@ -161,9 +183,40 @@ namespace Presentacion
 
         private void linkEditUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            btnGuardar.Visible = true;
+            btnGuardarContraseña.Visible = false;
             txtEditUsuario.Enabled = true;
+            txtEditPass.Enabled = false;
+            txtEditpass2.Enabled = false;
             txtEditUsuario.Text = " ";
             txtEditUsuario.Clear();
         }
+
+        private void btnGuardarContraseña_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conectar = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
+            try { 
+            if (txtEditPass.Text == txtEditpass2.Text)
+            {
+                conectar.Open();
+                MySqlCommand comando1 = new MySqlCommand("update usuario set contraseña ='" + txtEditPass.Text + "'where Ci = '" + UserCache.cedula + "'", conectar);
+                comando1.ExecuteNonQuery();
+                UserCache.usuario = txtEditUsuario.Text;
+                UserCache.contraseña = txtEditpass2.Text;
+                lblUsuarioPerfilA.Text = UserCache.usuario;
+                txtEditPass.Enabled = false;
+                txtEditpass2.Enabled = false;
+                conectar.Close();
+                MessageBox.Show("Se ha modificado correctamente la contraseña", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+
+            }
+            }
+            catch
+            {
+                MessageBox.Show("No se ha podido realizar la operacion", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+    }
     }
 }

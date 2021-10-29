@@ -113,6 +113,7 @@ namespace Presentacion
 
         private void btnBaja_Click(object sender, EventArgs e)
         {
+            try { 
             MySqlConnection conectar = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
             MySqlConnection conectar1 = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
             MySqlCommand comando = new MySqlCommand("update usuario set estado = 0 where Ci = '" + txtCedula.Text + "'", conectar);
@@ -125,6 +126,12 @@ namespace Presentacion
             comando1.ExecuteNonQuery();
             conectar.Close();
             conectar1.Close();
+            MessageBox.Show("Se ha dado de baja correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("No se ha podido realizar la operacion", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -145,6 +152,7 @@ namespace Presentacion
 
         private void btnBajadocente_Click(object sender, EventArgs e)
         {
+            try { 
             MySqlConnection conectar = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
             MySqlConnection conectar1 = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
             MySqlCommand comando = new MySqlCommand("update usuario set estado = 0 where Ci = '" + txtCedula.Text + "'", conectar);
@@ -155,6 +163,14 @@ namespace Presentacion
             comando1.ExecuteNonQuery();
             conectar.Close();
             conectar1.Close();
+            MessageBox.Show("Se ha dado de baja correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+
+            }
+            catch
+            {
+                MessageBox.Show("No se ha podido realizar la operacion", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
         

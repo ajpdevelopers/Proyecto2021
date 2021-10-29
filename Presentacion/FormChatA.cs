@@ -36,10 +36,15 @@ namespace Presentacion
         {
 
         }
-
+        private bool btnEnviado = false;
+        private bool btnEnviado2 = false;
         private void btnEnviar_Click(object sender, EventArgs e)
-        {
 
+        {
+            
         }
+
+     
     }
 }
+
