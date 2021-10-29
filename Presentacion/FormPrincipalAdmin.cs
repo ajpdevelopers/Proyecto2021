@@ -182,7 +182,7 @@ namespace Presentacion
             lblNombreIzq.Text = UserCache.nombre + " " + UserCache.apellido;
             //lblGrupoizq.Text = Usercache.grupo;
             lblCedulaizq.Text = Convert.ToString(UserCache.cedula);
-            pictureBox1.Image = (Image)Usuarios.imagen;
+            //pictureBox1.Image = (Image)Usuarios.imagen;
         }
 
         private void cerrarformularios(object sender, FormClosedEventArgs e)

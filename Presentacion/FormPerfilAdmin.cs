@@ -29,8 +29,8 @@ namespace Presentacion
             txtEditPass.Text = UserCache.contraseña;
             txtEditpass2.UseSystemPasswordChar = true;
             txtEditpass2.Text = UserCache.contraseña;
-            pictureDef.Image = (Image)Usuarios.imagen;
-            pictureBox1.Image = (Image)Usuarios.imagen;
+            //pictureDef.Image = (Image)Usuarios.imagen;
+            //pictureBox1.Image = (Image)Usuarios.imagen;
         }
     }
 }

@@ -67,11 +67,11 @@ namespace Presentacion
 
         private void FormPrincipalD_Load(object sender, EventArgs e)
         {
-            lblNombreIzq.Text = UsuariosDocente.nombre + " " + UsuariosDocente.apellido;
-            lblGrupo.Text = UsuariosDocente.grupo;
-            lblCedulaizq.Text = UsuariosDocente.cedula;
-            lblMateria.Text = UsuariosDocente.materia;
-            pictureBox1.Image = (Image)UsuariosDocente.imagen;
+            //lblNombreIzq.Text = UsuariosDocente.nombre + " " + UsuariosDocente.apellido;
+            //lblGrupo.Text = UsuariosDocente.grupo;
+            //lblCedulaizq.Text = UsuariosDocente.cedula;
+            //lblMateria.Text = UsuariosDocente.materia;
+            //pictureBox1.Image = (Image)UsuariosDocente.imagen;
 
         }
         public void cargaridioma()

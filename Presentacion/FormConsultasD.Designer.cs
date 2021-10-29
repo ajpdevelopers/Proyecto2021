@@ -29,11 +29,10 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEnviarConsA = new System.Windows.Forms.Button();
-            this.LimpiarConsA = new System.Windows.Forms.Button();
             this.txtRespuesta = new System.Windows.Forms.TextBox();
             this.profesorA = new System.Windows.Forms.Label();
             this.txtDestino = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@ namespace Presentacion
             this.label14 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.LimpiarConsA = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,21 +64,6 @@ namespace Presentacion
             this.btnEnviarConsA.Text = "ENVIAR";
             this.btnEnviarConsA.UseVisualStyleBackColor = false;
             this.btnEnviarConsA.Click += new System.EventHandler(this.btnEnviarConsA_Click);
-            // 
-            // LimpiarConsA
-            // 
-            this.LimpiarConsA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.LimpiarConsA.FlatAppearance.BorderSize = 0;
-            this.LimpiarConsA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.LimpiarConsA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.LimpiarConsA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LimpiarConsA.ForeColor = System.Drawing.Color.White;
-            this.LimpiarConsA.Location = new System.Drawing.Point(9, 439);
-            this.LimpiarConsA.Name = "LimpiarConsA";
-            this.LimpiarConsA.Size = new System.Drawing.Size(107, 37);
-            this.LimpiarConsA.TabIndex = 77;
-            this.LimpiarConsA.Text = "LIMPIAR";
-            this.LimpiarConsA.UseVisualStyleBackColor = false;
             // 
             // txtRespuesta
             // 
@@ -207,40 +192,56 @@ namespace Presentacion
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.SteelBlue;
             this.dataGridView1.Location = new System.Drawing.Point(235, 91);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(663, 385);
             this.dataGridView1.TabIndex = 65;
+            // 
+            // LimpiarConsA
+            // 
+            this.LimpiarConsA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.LimpiarConsA.FlatAppearance.BorderSize = 0;
+            this.LimpiarConsA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.LimpiarConsA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.LimpiarConsA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LimpiarConsA.ForeColor = System.Drawing.Color.White;
+            this.LimpiarConsA.Location = new System.Drawing.Point(12, 438);
+            this.LimpiarConsA.Name = "LimpiarConsA";
+            this.LimpiarConsA.Size = new System.Drawing.Size(107, 37);
+            this.LimpiarConsA.TabIndex = 79;
+            this.LimpiarConsA.Text = "MOSTRAR";
+            this.LimpiarConsA.UseVisualStyleBackColor = false;
+            this.LimpiarConsA.Click += new System.EventHandler(this.LimpiarConsA_Click);
             // 
             // FormConsultasD
             // 
@@ -248,8 +249,8 @@ namespace Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(903, 487);
-            this.Controls.Add(this.btnEnviarConsA);
             this.Controls.Add(this.LimpiarConsA);
+            this.Controls.Add(this.btnEnviarConsA);
             this.Controls.Add(this.txtRespuesta);
             this.Controls.Add(this.profesorA);
             this.Controls.Add(this.txtDestino);
@@ -273,7 +274,6 @@ namespace Presentacion
         }
 
         #endregion
-        private System.Windows.Forms.Button LimpiarConsA;
         private System.Windows.Forms.TextBox txtRespuesta;
         private System.Windows.Forms.Label profesorA;
         private System.Windows.Forms.TextBox txtDestino;
@@ -287,5 +287,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button btnEnviarConsA;
+        private System.Windows.Forms.Button LimpiarConsA;
     }
 }

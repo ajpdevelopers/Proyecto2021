@@ -180,7 +180,6 @@
     <Compile Include="LoginDocente.Designer.cs">
       <DependentUpon>LoginDocente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios.cs" />
     <Compile Include="FormRegistrarse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,7 +194,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsuariosDocente.cs" />
     <EmbeddedResource Include="FormBienvenidaAdmin.resx">
       <DependentUpon>FormBienvenidaAdmin.cs</DependentUpon>
     </EmbeddedResource>

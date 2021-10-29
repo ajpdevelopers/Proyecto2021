@@ -103,9 +103,10 @@ namespace Presentacion
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(274, 116);
+            this.dataGridView1.Location = new System.Drawing.Point(255, 116);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,7 +116,7 @@ namespace Presentacion
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(661, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(655, 296);
             this.dataGridView1.TabIndex = 53;
             // 
             // btnEnviar
@@ -126,7 +127,7 @@ namespace Presentacion
             this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(16, 222);
+            this.btnEnviar.Location = new System.Drawing.Point(12, 222);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(107, 37);
             this.btnEnviar.TabIndex = 90;
@@ -139,11 +140,11 @@ namespace Presentacion
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Blue;
-            this.label14.Location = new System.Drawing.Point(12, 146);
+            this.label14.Location = new System.Drawing.Point(7, 150);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(256, 23);
+            this.label14.Size = new System.Drawing.Size(215, 19);
             this.label14.TabIndex = 79;
             this.label14.Text = "Tipo de usuario a consultar";
             // 
@@ -155,7 +156,7 @@ namespace Presentacion
             this.LimpiarConsA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.LimpiarConsA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LimpiarConsA.ForeColor = System.Drawing.Color.White;
-            this.LimpiarConsA.Location = new System.Drawing.Point(143, 222);
+            this.LimpiarConsA.Location = new System.Drawing.Point(129, 222);
             this.LimpiarConsA.Name = "LimpiarConsA";
             this.LimpiarConsA.Size = new System.Drawing.Size(107, 37);
             this.LimpiarConsA.TabIndex = 89;
@@ -178,7 +179,7 @@ namespace Presentacion
             // radioAlumnos
             // 
             this.radioAlumnos.AutoSize = true;
-            this.radioAlumnos.Location = new System.Drawing.Point(95, 176);
+            this.radioAlumnos.Location = new System.Drawing.Point(86, 176);
             this.radioAlumnos.Name = "radioAlumnos";
             this.radioAlumnos.Size = new System.Drawing.Size(78, 17);
             this.radioAlumnos.TabIndex = 92;
@@ -189,7 +190,7 @@ namespace Presentacion
             // radioDocentes
             // 
             this.radioDocentes.AutoSize = true;
-            this.radioDocentes.Location = new System.Drawing.Point(184, 176);
+            this.radioDocentes.Location = new System.Drawing.Point(165, 176);
             this.radioDocentes.Name = "radioDocentes";
             this.radioDocentes.Size = new System.Drawing.Size(84, 17);
             this.radioDocentes.TabIndex = 93;
@@ -296,7 +297,7 @@ namespace Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(938, 515);
+            this.ClientSize = new System.Drawing.Size(947, 529);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnBajadocente);
@@ -326,7 +327,6 @@ namespace Presentacion
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button LimpiarConsA;
@@ -340,5 +340,6 @@ namespace Presentacion
         private System.Windows.Forms.Button btnBajadocente;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

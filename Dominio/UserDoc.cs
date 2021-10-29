@@ -20,7 +20,7 @@ namespace Dominio
                 {
 
                     command.Connection = connection;
-                    command.CommandText = "select * from usuario u, docente d where u.Ci=d.Ci and contraseña=@pass and d.estado = 1";
+                    command.CommandText = "select u.Ci, nombre, apellido , Username  from usuario u, docente d where u.Ci=d.Ci and contraseña=@pass and d.estado = 1";
                     command.Parameters.AddWithValue("@Ci", Ci);
                     command.Parameters.AddWithValue("@pass", pass);
                     command.CommandType = CommandType.Text;

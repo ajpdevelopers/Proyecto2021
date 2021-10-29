@@ -63,6 +63,7 @@ namespace Presentacion
             this.btnavatar1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnGuardarContraseña = new System.Windows.Forms.Button();
             this.panelEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnavatar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDef)).BeginInit();
@@ -225,6 +226,7 @@ namespace Presentacion
             // panelEditar
             // 
             this.panelEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.panelEditar.Controls.Add(this.btnGuardarContraseña);
             this.panelEditar.Controls.Add(this.linkEditUser);
             this.panelEditar.Controls.Add(this.linkEditarPass);
             this.panelEditar.Controls.Add(this.btnCancelar);
@@ -476,7 +478,7 @@ namespace Presentacion
             // 
             this.btnavatar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnavatar1.Image = global::Presentacion.Properties.Resources.descarga__3_1;
-            this.btnavatar1.Location = new System.Drawing.Point(2, 327);
+            this.btnavatar1.Location = new System.Drawing.Point(12, 315);
             this.btnavatar1.Name = "btnavatar1";
             this.btnavatar1.Size = new System.Drawing.Size(95, 67);
             this.btnavatar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -507,6 +509,23 @@ namespace Presentacion
             this.btnCerrar.TabIndex = 45;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnGuardarContraseña
+            // 
+            this.btnGuardarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.btnGuardarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardarContraseña.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarContraseña.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGuardarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardarContraseña.Location = new System.Drawing.Point(200, 217);
+            this.btnGuardarContraseña.Name = "btnGuardarContraseña";
+            this.btnGuardarContraseña.Size = new System.Drawing.Size(150, 46);
+            this.btnGuardarContraseña.TabIndex = 48;
+            this.btnGuardarContraseña.Text = "Guardar";
+            this.btnGuardarContraseña.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardarContraseña.UseVisualStyleBackColor = true;
+            this.btnGuardarContraseña.Visible = false;
+            this.btnGuardarContraseña.Click += new System.EventHandler(this.btnGuardarContraseña_Click);
             // 
             // FormPerfilA
             // 
@@ -592,5 +611,6 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.LinkLabel linkEditarPass;
         private System.Windows.Forms.LinkLabel linkEditUser;
+        private System.Windows.Forms.Button btnGuardarContraseña;
     }
 }
