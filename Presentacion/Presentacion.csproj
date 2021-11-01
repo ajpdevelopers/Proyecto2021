@@ -57,6 +57,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormChatD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChatD.Designer.cs">
+      <DependentUpon>FormChatD.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGruposAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBienvenidaDocente.resx">
       <DependentUpon>FormBienvenidaDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChatD.resx">
+      <DependentUpon>FormChatD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultasD.resx">
       <DependentUpon>FormConsultasD.cs</DependentUpon>

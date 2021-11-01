@@ -1,0 +1,17 @@
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\TestUnitarios.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\TestUnitarios.pdb
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\obj\Debug\TestUnitarios.csproj.AssemblyReference.cache
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\obj\Debug\TestUnitarios.csproj.CoreCompileInputs.cache
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\obj\Debug\TestUnitarios.csproj.CopyComplete
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\obj\Debug\TestUnitarios.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\obj\Debug\TestUnitarios.pdb
