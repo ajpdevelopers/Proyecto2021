@@ -43,3 +43,4 @@ C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.Log
 C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormPrincipalAdmin.resources
 C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormPerfilAdmin.resources
 C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormGruposAdmin.resources
+C:\Users\alejo\source\repos\Proyecto2021\Presentacion\obj\Debug\Presentacion.FormChatD.resources

@@ -57,7 +57,7 @@ namespace Presentacion
             this.btnEnviarConsA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnEnviarConsA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviarConsA.ForeColor = System.Drawing.Color.White;
-            this.btnEnviarConsA.Location = new System.Drawing.Point(122, 439);
+            this.btnEnviarConsA.Location = new System.Drawing.Point(122, 438);
             this.btnEnviarConsA.Name = "btnEnviarConsA";
             this.btnEnviarConsA.Size = new System.Drawing.Size(107, 37);
             this.btnEnviarConsA.TabIndex = 78;

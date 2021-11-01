@@ -21,7 +21,7 @@ namespace Dominio
                 {
 
                     command.Connection = connection;
-                    command.CommandText = "select * from usuario u, alumno a where u.Ci=a.Ci and contraseña=@pass and  a.estado = 1";
+                    command.CommandText = "select * from usuario u, alumno a where u.Ci=a.Ci and contraseña=@pass and  a.estado = 1 and a.Ci=@Ci";
                     command.Parameters.AddWithValue("@Ci", Ci);
                     command.Parameters.AddWithValue("@pass", pass);
                     command.CommandType = CommandType.Text;
