@@ -29,18 +29,20 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipalD));
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormularios = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnEspañol = new System.Windows.Forms.Button();
+            this.btnIngles = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblGrupo = new System.Windows.Forms.Label();
             this.lblMateria = new System.Windows.Forms.Label();
             this.lblCedulaizq = new System.Windows.Forms.Label();
             this.lblNombreIzq = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnIngles = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnChat = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
@@ -52,11 +54,11 @@ namespace Presentacion
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelContenedor.SuspendLayout();
             this.panelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelMenu.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitulo.SuspendLayout();
@@ -64,7 +66,6 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContenedor
@@ -100,6 +101,7 @@ namespace Presentacion
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panelMenu
             // 
@@ -118,6 +120,15 @@ namespace Presentacion
             this.panelMenu.Size = new System.Drawing.Size(194, 487);
             this.panelMenu.TabIndex = 1;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnEspañol);
+            this.flowLayoutPanel1.Controls.Add(this.btnIngles);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 458);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(94, 29);
+            this.flowLayoutPanel1.TabIndex = 42;
+            // 
             // btnEspañol
             // 
             this.btnEspañol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -133,6 +144,22 @@ namespace Presentacion
             this.btnEspañol.Text = "ES";
             this.btnEspañol.UseVisualStyleBackColor = false;
             this.btnEspañol.Click += new System.EventHandler(this.btnEspañol_Click);
+            // 
+            // btnIngles
+            // 
+            this.btnIngles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnIngles.FlatAppearance.BorderSize = 0;
+            this.btnIngles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnIngles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnIngles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngles.ForeColor = System.Drawing.Color.LightGray;
+            this.btnIngles.Location = new System.Drawing.Point(47, 3);
+            this.btnIngles.Name = "btnIngles";
+            this.btnIngles.Size = new System.Drawing.Size(38, 21);
+            this.btnIngles.TabIndex = 41;
+            this.btnIngles.Text = "EN";
+            this.btnIngles.UseVisualStyleBackColor = false;
+            this.btnIngles.Click += new System.EventHandler(this.btnIngles_Click);
             // 
             // panel1
             // 
@@ -204,22 +231,6 @@ namespace Presentacion
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnIngles
-            // 
-            this.btnIngles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnIngles.FlatAppearance.BorderSize = 0;
-            this.btnIngles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnIngles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnIngles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngles.ForeColor = System.Drawing.Color.LightGray;
-            this.btnIngles.Location = new System.Drawing.Point(47, 3);
-            this.btnIngles.Name = "btnIngles";
-            this.btnIngles.Size = new System.Drawing.Size(38, 21);
-            this.btnIngles.TabIndex = 41;
-            this.btnIngles.Text = "EN";
-            this.btnIngles.UseVisualStyleBackColor = false;
-            this.btnIngles.Click += new System.EventHandler(this.btnIngles_Click);
             // 
             // btnCerrarSesion
             // 
@@ -389,15 +400,6 @@ namespace Presentacion
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnEspañol);
-            this.flowLayoutPanel1.Controls.Add(this.btnIngles);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 458);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(94, 29);
-            this.flowLayoutPanel1.TabIndex = 42;
-            // 
             // FormPrincipalD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,6 +407,7 @@ namespace Presentacion
             this.ClientSize = new System.Drawing.Size(1103, 542);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrincipalD";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -414,6 +417,7 @@ namespace Presentacion
             this.panelFormularios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelMenu.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -423,7 +427,6 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

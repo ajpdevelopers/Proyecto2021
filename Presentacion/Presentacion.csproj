@@ -63,6 +63,12 @@
     <Compile Include="FormChatD.Designer.cs">
       <DependentUpon>FormChatD.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultasAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultasAdmin.Designer.cs">
+      <DependentUpon>FormConsultasAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGruposAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChatD.resx">
       <DependentUpon>FormChatD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultasAdmin.resx">
+      <DependentUpon>FormConsultasAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultasD.resx">
       <DependentUpon>FormConsultasD.cs</DependentUpon>

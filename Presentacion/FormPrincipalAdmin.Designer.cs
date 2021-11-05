@@ -29,6 +29,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipalAdmin));
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblPrincipal = new System.Windows.Forms.Label();
@@ -162,7 +163,7 @@ namespace Presentacion
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(191, 48);
             this.btnPerfil.TabIndex = 0;
-            this.btnPerfil.Text = "   Perfil";
+            this.btnPerfil.Text = "   ABM";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPerfil.UseVisualStyleBackColor = true;
@@ -359,6 +360,7 @@ namespace Presentacion
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(450, 500);
             this.Name = "FormPrincipalAdmin";
             this.Opacity = 0.9D;

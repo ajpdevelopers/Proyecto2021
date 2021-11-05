@@ -29,24 +29,25 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChatD));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelChat = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.txtDestinatario = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.panelChat = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtDestinatario = new System.Windows.Forms.TextBox();
             this.panelChatD = new System.Windows.Forms.Panel();
             this.txtChatD = new System.Windows.Forms.TextBox();
             this.btnEnviar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panelChatD.SuspendLayout();
@@ -68,16 +69,34 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(243, 487);
             this.panel1.TabIndex = 48;
             // 
-            // pictureBox1
+            // panel3
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.logo_large2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 487);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 72;
-            this.pictureBox1.TabStop = false;
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(249, 88);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(654, 348);
+            this.panel3.TabIndex = 70;
+            // 
+            // panelChat
+            // 
+            this.panelChat.BackColor = System.Drawing.Color.Transparent;
+            this.panelChat.Location = new System.Drawing.Point(243, 91);
+            this.panelChat.Name = "panelChat";
+            this.panelChat.Size = new System.Drawing.Size(694, 348);
+            this.panelChat.TabIndex = 70;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(22, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(184, 44);
+            this.label3.TabIndex = 69;
+            this.label3.Text = "Mensajes";
             // 
             // btnVolver
             // 
@@ -104,18 +123,16 @@ namespace Presentacion
             this.label1.TabIndex = 67;
             this.label1.Text = "Mensajes";
             // 
-            // label3
+            // pictureBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(22, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 44);
-            this.label3.TabIndex = 69;
-            this.label3.Text = "Mensajes";
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.logo_large2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 487);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 72;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -149,15 +166,6 @@ namespace Presentacion
             this.panel8.Size = new System.Drawing.Size(663, 42);
             this.panel8.TabIndex = 69;
             // 
-            // txtDestinatario
-            // 
-            this.txtDestinatario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDestinatario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.txtDestinatario.Location = new System.Drawing.Point(188, 3);
-            this.txtDestinatario.Name = "txtDestinatario";
-            this.txtDestinatario.Size = new System.Drawing.Size(252, 35);
-            this.txtDestinatario.TabIndex = 7;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -169,21 +177,14 @@ namespace Presentacion
             this.label12.TabIndex = 6;
             this.label12.Text = "Destinatario";
             // 
-            // panelChat
+            // txtDestinatario
             // 
-            this.panelChat.BackColor = System.Drawing.Color.Transparent;
-            this.panelChat.Location = new System.Drawing.Point(243, 91);
-            this.panelChat.Name = "panelChat";
-            this.panelChat.Size = new System.Drawing.Size(694, 348);
-            this.panelChat.TabIndex = 70;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(249, 88);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(654, 348);
-            this.panel3.TabIndex = 70;
+            this.txtDestinatario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDestinatario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.txtDestinatario.Location = new System.Drawing.Point(188, 3);
+            this.txtDestinatario.Name = "txtDestinatario";
+            this.txtDestinatario.Size = new System.Drawing.Size(280, 35);
+            this.txtDestinatario.TabIndex = 7;
             // 
             // panelChatD
             // 
@@ -227,13 +228,14 @@ namespace Presentacion
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormChatD";
             this.Opacity = 0.9D;
             this.Text = "FormChatD";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel8.ResumeLayout(false);

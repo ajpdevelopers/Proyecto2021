@@ -43,10 +43,10 @@ namespace Presentacion
         private void btnEnviar_Click(object sender, EventArgs e)
         
         {
-            MySqlConnection conectar = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
-            conectar.Open();
-            MySqlCommand comando = new MySqlCommand("insert into chat(registro, CiDocente,CiAlumno ) values ('" + txtChatA.Text + "','" + txtDestinatario.Text + "','" + UserCache.cedula + "');", conectar);
-            comando.ExecuteNonQuery();
+            //MySqlConnection conectar = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
+            //conectar.Open();
+            //MySqlCommand comando = new MySqlCommand("insert into mensaje(registro, CiDocentCiAlumno ) values ('1'"+ txtChatA.Text + "','" + txtDestinatario.Text + "','" + UserCache.cedula + "');", conectar);
+            //comando.ExecuteNonQuery();
             var bucle = new Label();
             panelChat.Controls.Add(bucle);
             bucle.BringToFront();
@@ -59,7 +59,45 @@ namespace Presentacion
             
             
         }
+        private void cargar()
+        {
+            //MySqlConnection conectar = new MySqlConnection("Server= localhost; port = 3306; Database = chat_bd; Uid = root; pwd = 0312;");
+         
+            
 
+
+
+            //    DataTable dataTable = new DataTable();
+            //    MySqlDataReader resultado;
+
+            //    MySqlCommand comando = new MySqlCommand("SELECT registro FROM chat WHERE idChat = 99876123", conectar);
+
+
+            //    comando.CommandType = CommandType.Text;
+
+
+            //    conectar.Open();
+
+            //    resultado = comando.ExecuteReader();
+            //    dataTable.Load(resultado);
+
+
+               
+            //    conectar.Close();
+            
+            //for (int i = 0; i < dataTable.Rows.Count; i++)
+            //{
+            //    var bucle = new Label();
+            //    panelChat.Controls.Add(bucle);
+            //    bucle.BringToFront();
+            //    bucle.Left = 10;
+            //    bucle.Top = 20;
+            //    bucle.Text = Convert.ToString(dataTable);
+            //    bucle.Dock = DockStyle.Top;
+            //    bucle.BorderStyle = BorderStyle.Fixed3D;
+
+            //}
+        }
 
 
 
@@ -76,6 +114,21 @@ namespace Presentacion
         private void pictureBox1_Click(object sender, EventArgs e)
         {
                     }
+
+        private void txtChatA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelChat_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

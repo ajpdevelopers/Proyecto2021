@@ -29,6 +29,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPerfilD));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@ namespace Presentacion
             this.lblCedulaD = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panelEditar = new System.Windows.Forms.Panel();
+            this.btnGuardarContraseña = new System.Windows.Forms.Button();
             this.linkEditUser = new System.Windows.Forms.LinkLabel();
             this.linkEditarPass = new System.Windows.Forms.LinkLabel();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -65,7 +67,6 @@ namespace Presentacion
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblMateriaD = new System.Windows.Forms.Label();
-            this.btnGuardarContraseña = new System.Windows.Forms.Button();
             this.panelEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnavatar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDef)).BeginInit();
@@ -249,6 +250,23 @@ namespace Presentacion
             this.panelEditar.TabIndex = 20;
             this.panelEditar.Visible = false;
             this.panelEditar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEditar_Paint);
+            // 
+            // btnGuardarContraseña
+            // 
+            this.btnGuardarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.btnGuardarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardarContraseña.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarContraseña.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGuardarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardarContraseña.Location = new System.Drawing.Point(200, 217);
+            this.btnGuardarContraseña.Name = "btnGuardarContraseña";
+            this.btnGuardarContraseña.Size = new System.Drawing.Size(150, 46);
+            this.btnGuardarContraseña.TabIndex = 48;
+            this.btnGuardarContraseña.Text = "Guardar";
+            this.btnGuardarContraseña.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardarContraseña.UseVisualStyleBackColor = true;
+            this.btnGuardarContraseña.Visible = false;
+            this.btnGuardarContraseña.Click += new System.EventHandler(this.btnGuardarContraseña_Click);
             // 
             // linkEditUser
             // 
@@ -540,23 +558,6 @@ namespace Presentacion
             this.lblMateriaD.Text = "materia";
             this.lblMateriaD.Click += new System.EventHandler(this.label8_Click);
             // 
-            // btnGuardarContraseña
-            // 
-            this.btnGuardarContraseña.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.btnGuardarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardarContraseña.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarContraseña.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGuardarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarContraseña.Location = new System.Drawing.Point(200, 217);
-            this.btnGuardarContraseña.Name = "btnGuardarContraseña";
-            this.btnGuardarContraseña.Size = new System.Drawing.Size(150, 46);
-            this.btnGuardarContraseña.TabIndex = 48;
-            this.btnGuardarContraseña.Text = "Guardar";
-            this.btnGuardarContraseña.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuardarContraseña.UseVisualStyleBackColor = true;
-            this.btnGuardarContraseña.Visible = false;
-            this.btnGuardarContraseña.Click += new System.EventHandler(this.btnGuardarContraseña_Click);
-            // 
             // FormPerfilD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -589,6 +590,7 @@ namespace Presentacion
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPerfilD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPerfilA";
