@@ -1,0 +1,86 @@
+/*Consultas tercera entrega*/
+/*1. Mostrar el nombre de los docentes de la asignatura "Bases de Datos" que
+respondieron más
+consultas en el último mes (30 días anteriores) que algún docente de Progrmación*/
+
+select nombre Profesor
+from Usuario U, Docente D, trabaja T, Asignatura A, Consulta C
+where U.Ci = D.Ci and t.CiDocente = D.Ci and A.IDMateria = T.IDMateria and C.CiDocente = D.Ci and Materia = 'Base de Datos'
+and fechaC>=(curdate()-interval 30 day)
+group by c.Cidocente
+having count(D.Ci)>=all(select count(C.CiDocente)
+from Usuario U, Docente D, trabaja T, Asignatura A, Consulta C
+where U.Ci = D.Ci and T.CiDocente = D.Ci and A.IDMateria = T.IDMateria and C.CiDocente = D.Ci and Materia = 'Programacion'
+group by C.CiDocente);
+
+
+/*2. Mostrar el total de consultas asincrónicas realizadas en los meses de
+agosto, setiembre y octubre.
+Deberán aparecer tres líneas, una para cada mes indicando la cantidad de
+consultas.*/
+
+Select count(c.CiDocente) as "Total consultas Agosto, Setiembre, Octubre"
+from  consulta C
+where  month(FechaC)=8
+union
+Select count(c.CiDocente) 
+from  consulta C
+where  month(FechaC)=9
+union
+Select count(c.CiDocente) 
+from  consulta C
+where  month(FechaC)=10;
+
+/*3. Mostrar el nombre de los alumnos que no participaron en chats en el último
+mes.*/
+select Nombre
+from Usuario U, Alumno A
+where U.Ci = A.Ci and A.Ci not in (select A.Ci
+from Usuario U, Alumno A, Chat C, mensaje m
+where U.Ci=A.Ci and A.Ci=C.CiAlumno and M.IDChat = C.IDChat and  fecha>=(curdate()-interval 30 day)
+group by A.Ci);
+
+/*4. Mostrar la cantidad de veces que hubo chats para cada asignatura los últimos
+30 días.
+Mostrar únicamente aquellos que hayan tenido más de tres chats*/
+
+select count(c.idchat), A.Materia Asignatura
+from docente d, chat c, trabaja t, asignatura a, mensaje m
+where d.Ci=c.CiDocente and t.CiDocente=d.Ci and t.IdMateria=a.IdMateria and c.IDChat = m.IDChat and fecha>=(curdate()-interval 30 day)
+group by A.Materia
+having count(a.IdMateria)>3;
+
+/*5. Mostrar los datos de los docentes y los chats donde han participado. En caso
+de no haber
+participado, deberán mostrarse de todos modos los datos de esos docentes.*/
+
+Select *
+from  (Docente inner join usuario 
+on Docente.Ci = Usuario.Ci) 
+left join chat
+on Docente.Ci = Chat.CiDocente;
+
+/*6. Mostrar el o los nombres de los docentes que han respondido más consultas
+asincrónicas.*/
+
+Select u.nombre 
+from docente D, consulta C, Usuario U
+where C.CiDocente = D.Ci  and D.Ci = U.Ci
+group by C.CiDocente 
+having count(c.CiDocente)>=all(select count(c.CiDocente)  
+from Consulta C, Docente D
+where D.Ci = C.CiDocente and Agenda 
+group by D.Ci);
+
+
+/*7. Crear una vista que muestre los datos de los chats que han participado el
+grupo 3ºBA en la última
+semana. Otorgarle al usuario u_prueba permisos para ver esa vista*/
+
+create view Chat3BA as
+select IdChat, Registro, Individual, Grupal, Calidad, ciDocente Docente, c.cialumno Alumno
+from chat c, alumno a, grupo g, tiene t
+where c.CiAlumno=a.Ci and t.ciAlumno= a.ci and t.idgrupo=g.idgrupo and g.Nomgrupo='3ºBA';
+create user 'u_prueba';
+GRANT SELECT ON Chat_BD.Chat3BA TO 'u_prueba';
+show grants for u_prueba;
