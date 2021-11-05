@@ -54,7 +54,6 @@ namespace Presentacion
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.linkEditarpA = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -308,27 +307,12 @@ namespace Presentacion
             this.label11.TabIndex = 0;
             this.label11.Text = "ALTA DE DOCENTES";
             // 
-            // linkEditarpA
-            // 
-            this.linkEditarpA.ActiveLinkColor = System.Drawing.Color.Maroon;
-            this.linkEditarpA.AutoSize = true;
-            this.linkEditarpA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkEditarpA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkEditarpA.Location = new System.Drawing.Point(292, 308);
-            this.linkEditarpA.Name = "linkEditarpA";
-            this.linkEditarpA.Size = new System.Drawing.Size(214, 16);
-            this.linkEditarpA.TabIndex = 93;
-            this.linkEditarpA.TabStop = true;
-            this.linkEditarpA.Text = "¿Quieres comprobar los registros?";
-            this.linkEditarpA.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEditarpA_LinkClicked);
-            // 
             // FormPerfilAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(903, 487);
-            this.Controls.Add(this.linkEditarpA);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCerrar);
@@ -374,6 +358,5 @@ namespace Presentacion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button btnAltaDocente;
-        private System.Windows.Forms.LinkLabel linkEditarpA;
     }
 }

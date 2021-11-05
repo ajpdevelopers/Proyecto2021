@@ -159,7 +159,7 @@ namespace Presentacion
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
-            AbrirFormularios<FormConsultasA>();
+            AbrirFormularios<FormConsultasAdmin>();
             btnConsultas.BackColor = Color.FromArgb(12, 61, 92);
             lblPrincipal.Text = "Consultas";
             btnEspañol.Visible = false;

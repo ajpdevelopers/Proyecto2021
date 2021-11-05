@@ -109,6 +109,7 @@ namespace Presentacion
             this.btnVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnVolver.TabIndex = 71;
             this.btnVolver.TabStop = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label1
             // 

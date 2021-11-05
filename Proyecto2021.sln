@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitarios", "TestUnitarios\TestUnitarios.csproj", "{7051F993-43E5-4665-BCC5-8F1C53553C37}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Educhat", "Educhat\Educhat.vdproj", "{51991A59-0358-4FD6-8C34-D0A524C9CE46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,8 @@ Global
 		{7051F993-43E5-4665-BCC5-8F1C53553C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7051F993-43E5-4665-BCC5-8F1C53553C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7051F993-43E5-4665-BCC5-8F1C53553C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51991A59-0358-4FD6-8C34-D0A524C9CE46}.Debug|Any CPU.ActiveCfg = Debug
+		{51991A59-0358-4FD6-8C34-D0A524C9CE46}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

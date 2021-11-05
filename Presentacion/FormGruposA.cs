@@ -28,5 +28,10 @@ namespace Presentacion
             lblNombre.Text = UserCache.nombre + " " + UserCache.apellido;
             lblGrupo.Text = UserCache.grupo;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
