@@ -2,15 +2,15 @@ create database Chat_BD;
 use Chat_BD;
 
 create table Usuario(Ci int(8) primary key not null, nombre varchar(45) not null, apellido varchar (45) not null, 
-Username varchar(45) not null, contraseña varchar(45) not null, ImagenDePerfil longblob);
+Username varchar(45) not null, contraseña varchar(45) not null, ImagenDePerfil longblob, estado boolean);
 
 
-create table Alumno(Ci int primary key not null, foreign key (Ci) references Usuario(Ci));
+create table Alumno(Ci int primary key not null, estado boolean, foreign key (Ci) references Usuario(Ci));
 create table Grupo(Nomgrupo Varchar(10) not null, IDGrupo int primary key not null);
 create table tiene(CiAlumno int not null, IDGrupo int not null, foreign key (IDGrupo) references Grupo(IDGrupo), 
 foreign key (CiAlumno) references Alumno(Ci));
 
-create table Docente(Ci int primary key not null, foreign key (Ci) references Usuario(Ci));
+create table Docente(Ci int primary key not null, estado boolean, foreign key (Ci) references Usuario(Ci));
 create table Asignatura(IdMateria int primary key not null, Materia Varchar(20) not null);
 create table trabaja(CiDocente int not null, IDMateria int not null, foreign key (CiDocente) references Docente(Ci),
 foreign key (IDMateria) references Asignatura(IdMateria));
