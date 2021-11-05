@@ -15,3 +15,8 @@ C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\obj\Debug\TestUnitarios.c
 C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\obj\Debug\TestUnitarios.csproj.CopyComplete
 C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\obj\Debug\TestUnitarios.dll
 C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\obj\Debug\TestUnitarios.pdb
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Datos.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Dominio.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\MySql.Data.dll
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Datos.pdb
+C:\Users\alejo\source\repos\Proyecto2021\TestUnitarios\bin\Debug\Dominio.pdb
