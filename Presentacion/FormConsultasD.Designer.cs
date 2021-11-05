@@ -47,7 +47,9 @@ namespace Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.LimpiarConsA = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEnviarConsA
@@ -244,12 +246,27 @@ namespace Presentacion
             this.LimpiarConsA.UseVisualStyleBackColor = false;
             this.LimpiarConsA.Click += new System.EventHandler(this.LimpiarConsA_Click);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::Presentacion.Properties.Resources.Close;
+            this.btnCerrar.Location = new System.Drawing.Point(0, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(16, 16);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 80;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // FormConsultasD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(903, 487);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.LimpiarConsA);
             this.Controls.Add(this.btnEnviarConsA);
             this.Controls.Add(this.txtRespuesta);
@@ -270,6 +287,7 @@ namespace Presentacion
             this.Text = "FormConsultasD";
             this.Load += new System.EventHandler(this.FormConsultasD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +308,6 @@ namespace Presentacion
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button btnEnviarConsA;
         private System.Windows.Forms.Button LimpiarConsA;
+        private System.Windows.Forms.PictureBox btnCerrar;
     }
 }

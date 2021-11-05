@@ -50,11 +50,11 @@ namespace Presentacion
             var bucle = new Label();
             panelChat.Controls.Add(bucle);
             bucle.BringToFront();
-            bucle.Left = 10;
-            bucle.Top = 20;
+            bucle.Left = 15;
+            bucle.Top = 25;
             bucle.Dock = DockStyle.Top;
             bucle.Text = txtChatA.Text;
-            bucle.BorderStyle = BorderStyle.Fixed3D;
+            bucle.BorderStyle = BorderStyle.FixedSingle;
             
             
             
@@ -128,6 +128,11 @@ namespace Presentacion
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
