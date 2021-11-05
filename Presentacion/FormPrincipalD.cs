@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading;
-
+using Dominio;
 
 namespace Presentacion
 {
@@ -67,11 +67,11 @@ namespace Presentacion
 
         private void FormPrincipalD_Load(object sender, EventArgs e)
         {
-            //lblNombreIzq.Text = UsuariosDocente.nombre + " " + UsuariosDocente.apellido;
-            //lblGrupo.Text = UsuariosDocente.grupo;
-            //lblCedulaizq.Text = UsuariosDocente.cedula;
-            //lblMateria.Text = UsuariosDocente.materia;
-            //pictureBox1.Image = (Image)UsuariosDocente.imagen;
+            lblNombreIzq.Text = UserCache.nombre + " " + UserCache.apellido;
+            lblGrupo.Text = UserCache.grupo;
+            lblCedulaizq.Text = Convert.ToString(UserCache.cedula);
+          
+            
 
         }
         public void cargaridioma()
@@ -224,6 +224,11 @@ namespace Presentacion
         }
 
         private void lblMateria_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

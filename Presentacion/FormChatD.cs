@@ -34,6 +34,7 @@ namespace Presentacion
                 bucle.Dock = DockStyle.Top;
                 bucle.Text = txtChatD.Text;
                 bucle.BorderStyle = BorderStyle.Fixed3D;
+
             }
             catch
             {
