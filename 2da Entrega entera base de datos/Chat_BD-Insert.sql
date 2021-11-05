@@ -1,28 +1,28 @@
 /*Alumnos*/
-insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(51996594, 'Pablo', 'Sosa', 'Paso', 'P894526873');
-insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(54357935, 'joaquin', 'ferreira', 'Joacote', 'J4965487354');
-insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(53489753, 'Alejandro', 'Rodriguez', 'Aleord55', 'Alejandro12');
-insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(53106408, 'Mario', 'Santos', 'Santos12', 'MS8768752');
-insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(52987456, 'Agustin', 'Rodales', 'Agusrodales', 'Ap46586546');
+insert into Usuario(Ci, nombre, apellido, Username, contraseña,estado) value(51996594, 'Pablo', 'Sosa', 'Paso', 'P894526873',1);
+insert into Usuario(Ci, nombre, apellido, Username, contraseña,estado) value(54357935, 'joaquin', 'ferreira', 'Joacote', 'J4965487354',1);
+insert into Usuario(Ci, nombre, apellido, Username, contraseña,estado) value(53489753, 'Alejandro', 'Rodriguez', 'Aleord55', 'Alejandro12',1);
+insert into Usuario(Ci, nombre, apellido, Username, contraseña,estado) value(53106408, 'Mario', 'Santos', 'Santos12', 'MS8768752',1);
+insert into Usuario(Ci, nombre, apellido, Username, contraseña,estado) value(52987456, 'Agustin', 'Rodales', 'Agusrodales', 'Ap46586546',1);
 
-insert into Alumno value (51996594);
-insert into Alumno value (54357935);
-insert into Alumno value (53489753);
-insert into Alumno value (53106408);
-insert into Alumno value (52987456);
+insert into Alumno value (51996594,1);
+insert into Alumno value (54357935,1);
+insert into Alumno value (53489753,1);
+insert into Alumno value (53106408,1);
+insert into Alumno value (52987456,1);
 
 /*Docentes*/
-insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(36843456, 'Martin', 'Viar', 'Viar', 'MV8796574');
-insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(37954689, 'Marcos', 'Palermo', 'Palermo12', 'IgSalvia987657');
-insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(16584358, 'Cristian', 'Gonzalez', 'Cristiano', 'CrGz9866864');
-insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(13548965, 'Enrique', 'Rosales', 'Enrique23', 'EnrEs9887354');
-insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(23549689, 'Pablo', 'Perrone', 'Perrone21', 'PPP1084654');
+insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(36843456, 'Martin', 'Viar', 'Viar', 'MV8796574',1);
+insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(37954689, 'Marcos', 'Palermo', 'Palermo12', 'IgSalvia987657',1);
+insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(16584358, 'Cristian', 'Gonzalez', 'Cristiano', 'CrGz9866864',1);
+insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(13548965, 'Enrique', 'Rosales', 'Enrique23', 'EnrEs9887354',1);
+insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(23549689, 'Pablo', 'Perrone', 'Perrone21', 'PPP1084654',1);
 
-insert into Docente value (36843456);
-insert into Docente value (37954689);
-insert into Docente value (16584358);
-insert into Docente value (13548965);
-insert into Docente value (23549689);
+insert into Docente value (36843456,1);
+insert into Docente value (37954689,1);
+insert into Docente value (16584358,1);
+insert into Docente value (13548965,1);
+insert into Docente value (23549689,1);
 
 /*Administrador*/
 insert into Usuario(Ci, nombre, apellido, Username, contraseña) value(53584031, 'Alejo', 'Nievas', 'AleNievas18', 'AlNs986654');
